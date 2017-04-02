@@ -1,0 +1,26 @@
+body {
+  font-family: sans-serif;
+  font-size: 14px;
+  background-color: #D6EAF8;
+  margin: 0 auto; }
+
+h1 {
+  color: #6E2C00;
+  font-size: 50px;
+  display: block;
+  margin: 0 auto;
+  padding: 20px; }
+
+p {
+  padding: 0 50px; }
+
+.wrapper {
+  padding: 20px;
+  margin: 0 100px;
+  background-color: #fff;
+  height: 100vh; }
+
+.center {
+  text-align: center; }
+
+/*# sourceMappingURL=style.css.map */
