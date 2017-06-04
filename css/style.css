@@ -13,11 +13,6 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.caption {
-  font-size: 30px;
-  text-align: center;
-}
-
 a:link, a:visited {
   color: #999;
   text-decoration: none;
