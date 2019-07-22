@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
 import Index from './views';
 
-function PageNotFound() {
-    return <h2>404 Page Not Found</h2>;
+function PageNotFound({ location }) {
+    return <h2>404 Page Not Found @ {location.pathname.replace(/\/$/, "")}</h2>;
 }
 
 class Router extends React.Component {
