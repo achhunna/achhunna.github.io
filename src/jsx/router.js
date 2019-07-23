@@ -1,9 +1,16 @@
 import React from 'react';
-import { BrowserRouter, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Index from './views';
+import About from './views/about';
 
 function PageNotFound({ location }) {
-    return <h2>404 Page Not Found @ {location.pathname.replace(/\/$/, "")}</h2>;
+    return (
+        <div>
+            <h1>😔 Oops!</h1>
+            <section>can't find: {location.pathname.replace(/\/$/, "")}</section>
+            <a href="/" className="home-link">&#60; home</a>
+        </div>
+    );
 }
 
 class Router extends React.Component {
@@ -11,24 +18,9 @@ class Router extends React.Component {
         return (
             <BrowserRouter>
                 <div>
-                    <nav>
-                        <ul>
-                            <li>
-                                <Link to="/">Home</Link>
-                            </li>
-                            <li>
-                                <Link to="/about">About</Link>
-                            </li>
-                            <li>
-                                <Link to="/app">App</Link>
-                            </li>
-                            <li>
-                                <Link to="/contact">Contact</Link>
-                            </li>
-                        </ul>
-                    </nav>
                     <Switch>
                         <Route path="/" exact component={Index} />
+                        <Route path="/about" exact component={About} />
                         <Route component={PageNotFound} />
                     </Switch>
                 </div>
