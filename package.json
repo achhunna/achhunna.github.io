@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/achhunna/achhunna.github.io/issues"
   },
-  "homepage": "https://github.com/achhunna/achhunna.github.io#readme",
+  "homepage": "https://achhunna.com",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
