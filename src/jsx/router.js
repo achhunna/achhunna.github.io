@@ -2,13 +2,14 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Index from './views';
 import About from './views/about';
+import Back from './partials/back';
 
 function PageNotFound({ location }) {
     return (
         <div>
             <h1>😔 Oops!</h1>
             <section>can't find: {location.pathname.replace(/\/$/, "")}</section>
-            <a href="/" className="home-link">&#60; home</a>
+            <Back />
         </div>
     );
 }

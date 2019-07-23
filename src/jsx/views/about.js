@@ -1,4 +1,5 @@
 import React from 'react';
+import Back from '../partials/back';
 
 class About extends React.Component {
     render() {
@@ -21,7 +22,7 @@ class About extends React.Component {
                 <p className="footnote">
                 ✉️ Send me a note: <a href="mailto:achhunna@gmail.com?subject=hello">achhunna@gmail.com</a>
                 </p>
-                <a href="/" className="home-link">&#60; home</a>
+                <Back />
             </div>
         );
     }
