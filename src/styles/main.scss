@@ -7,9 +7,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     font-size: 16px;
-    min-height: min-content;
+    height: min-content;
 }
 
 #container {
