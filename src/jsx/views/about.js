@@ -13,7 +13,7 @@ class About extends React.Component {
                             front-end engineer with a passion for learning new technologies and applying myself towards building products that bring meaningful change
                         </li>
                         <li>
-                            currently working on peer-to-peer based streaming product at <a href="https://bittorrent.com">BitTorrent</a>
+                            currently working on peer-to-peer based streaming product at <a href="https://bittorrent.com" target="_blank">BitTorrent</a>
                         </li>
                         <li>
                             some <Link to="/uses">things</Link> I use on a daily basis
