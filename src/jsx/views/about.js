@@ -1,5 +1,6 @@
 import React from 'react';
 import Back from '../partials/back';
+import { Link } from 'react-router-dom';
 
 class About extends React.Component {
     render() {
@@ -9,13 +10,13 @@ class About extends React.Component {
                 <section>
                     <ul>
                         <li>
-                            passion for learning new technologies, particularly in front-end web because its always changing...always growing
+                            front-end engineer with a passion for learning new technologies and applying myself towards building products that bring meaningful change
                         </li>
                         <li>
-                            applying experience and knowledge towards building products that bring meaningful change
+                            currently working on peer-to-peer based streaming product at <a href="https://bittorrent.com">BitTorrent</a>
                         </li>
                         <li>
-                            currently working on P2P based streaming solution at <a href="https://bittorrent.com">BitTorrent</a>
+                            some <Link to="/uses">things</Link> I use on a daily basis
                         </li>
                     </ul>
                 </section>

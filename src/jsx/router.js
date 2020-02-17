@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Index from './views';
 import About from './views/about';
 import Back from './partials/back';
+import Uses from './views/uses';
 
 function PageNotFound({ location }) {
     return (
@@ -22,6 +23,7 @@ class Router extends React.Component {
                     <Switch>
                         <Route path="/" exact component={Index} />
                         <Route path="/about" exact component={About} />
+                        <Route path="/uses" exact component={Uses} />
                         <Route component={PageNotFound} />
                     </Switch>
                 </div>
