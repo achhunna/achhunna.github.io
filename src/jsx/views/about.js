@@ -18,6 +18,9 @@ class About extends React.Component {
                         <li>
                             some <Link to="/uses">things</Link> I use on a daily basis
                         </li>
+                        <li>
+                            sometimes I write <a href="https://medium.com/@achhunna" target="_blank">stuff</a>
+                        </li>
                     </ul>
                 </section>
                 <p className="footnote">
