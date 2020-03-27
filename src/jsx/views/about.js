@@ -10,7 +10,7 @@ class About extends React.Component {
                 <section>
                     <ul>
                         <li>
-                            front-end engineer with a passion for learning new technologies and applying myself towards building products that bring meaningful change
+                            front-end engineer with a passion for learning new technologies and building products that bring meaningful change
                         </li>
                         <li>
                             currently working on decentralized content sharing products at <a href="https://bittorrent.com" target="_blank">BitTorrent</a>
