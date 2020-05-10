@@ -14,10 +14,10 @@ class Uses extends React.Component {
                             <a href="https://code.visualstudio.com" target="_blank">Visual Studio Code</a>: one of the best text editors for web development
                         </li>
                         <li>
-                            Terminal: standard macOS terminal with Z shell 
+                            Terminal: standard macOS terminal with Z shell
                         </li>
                         <li>
-                            <a href="https://slack.com/downloads/mac" target="_blank">Slack</a>: work related communication happes here, great for archiving and channel discussions
+                            <a href="https://slack.com/downloads/mac" target="_blank">Slack</a>: work related communication happens here, great for archiving channel discussions
                         </li>
                         <li>
                             <a href="https://zeplin.io/" target="_blank">Zeplin</a>: sharing UI/UX mocks
