@@ -52,7 +52,7 @@ class Uses extends React.Component {
                             <a href="https://www.keychron.com/products/keychron-k2-wireless-mechanical-keyboard" target="_blank">Keychron K2</a> mechanical keyboard
                         </li>
                         <li>
-                            <a href="https://pro.sony/ue_US/products/headphones/mdr-7506" target="_blank">Sony MDR-7506</a> studio monitors
+                            <a href="https://www.amazon.com/Sony-MDR7506-Professional-Diaphragm-Headphone/dp/B000AJIF4E/" target="_blank">Sony MDR-7506</a> studio monitors
                         </li>
                         <li>
                             <a href="https://www.apple.com/shop/product/HMUA2VC/A/lg-ultrafine-4k-display" target="_blank">LG UltraFine 4K Display</a>: best reasonably priced external monitors for Macs
