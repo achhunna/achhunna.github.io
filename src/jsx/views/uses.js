@@ -60,6 +60,15 @@ class Uses extends React.Component {
             </li>
             <li>
               <a
+                href="https://www.amazon.com/gp/product/B09J5C4KRY/"
+                target="_blank"
+              >
+                Logitech Pebble M350
+              </a>{" "}
+              wireless mouse
+            </li>
+            <li>
+              <a
                 href="https://www.amazon.com/Sony-MDR7506-Professional-Diaphragm-Headphone/dp/B000AJIF4E/"
                 target="_blank"
               >
