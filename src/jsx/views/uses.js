@@ -42,10 +42,8 @@ class Uses extends React.Component {
             <li>
               
               <ul>
-                <li>MacBook Pro 16" (2019)</li>
+                <li>MacBook Pro 16" (2021)</li>
                 <li>iPhone 12 mini</li>
-                <li>Magic Trackpad 2</li>
-                <li>Magic Keyboard 2</li>
                 <li>AirPods Pro</li>
               </ul>
             </li>
@@ -66,24 +64,6 @@ class Uses extends React.Component {
                 Logitech Pebble M350
               </a>{" "}
               wireless mouse
-            </li>
-            <li>
-              <a
-                href="https://www.amazon.com/Sony-MDR7506-Professional-Diaphragm-Headphone/dp/B000AJIF4E/"
-                target="_blank"
-              >
-                Sony MDR-7506
-              </a>{" "}
-              studio monitor headphones
-            </li>
-            <li>
-              <a
-                href="https://www.apple.com/shop/product/HMUA2VC/A/lg-ultrafine-4k-display"
-                target="_blank"
-              >
-                LG UltraFine 4K Display
-              </a>
-              : best reasonably priced external monitors for Macs
             </li>
           </ul>
         </section>
