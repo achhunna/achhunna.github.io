@@ -42,7 +42,7 @@ class Uses extends React.Component {
             <li>
               
               <ul>
-                <li>MacBook Pro 16" (2021)</li>
+                <li>MacBook Pro M1 16" (2021)</li>
                 <li>iPhone 12 mini</li>
                 <li>AirPods Pro</li>
               </ul>
