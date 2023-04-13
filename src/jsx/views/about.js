@@ -13,9 +13,6 @@ class About extends React.Component {
                             front-end engineer with a passion for learning new technologies and building products that bring meaningful change
                         </li>
                         <li>
-                            currently at <a href="https://algorithms-tour.stitchfix.com/" target="_blank">Stitch Fix Algorithms</a> doing neat things with data
-                        </li>
-                        <li>
                             some <Link to="/uses">things</Link> I use on a daily basis
                         </li>
                         <li>
