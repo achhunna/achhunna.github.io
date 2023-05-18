@@ -5,7 +5,7 @@ import "./uses.scss";
 class Uses extends React.Component {
   render() {
     return (
-      <div>
+      <div className="container">
         <h1 className="content-header">👨‍💻 things I use</h1>
         <section>
           <ul>
