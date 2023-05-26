@@ -14,6 +14,10 @@ class About extends React.Component {
               and building products that bring meaningful change
             </li>
             <li>
+              currently building navigation data UI at{" "}
+              <a href="/pages/nyt-saildrone">Saildrone</a>
+            </li>
+            <li>
               some <Link to="/uses">things</Link> I use on a daily basis
             </li>
             <li>
