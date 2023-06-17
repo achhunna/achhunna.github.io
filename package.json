@@ -1,43 +1,17 @@
 {
-  "name": "achhunna.github.io",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "start": "webpack-dev-server --color --progress --config webpack.config.js",
-    "build": "webpack -p"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/achhunna/achhunna.github.io.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/achhunna/achhunna.github.io/issues"
-  },
-  "homepage": "https://achhunna.com",
-  "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "css-loader": "^0.28.11",
-    "mini-css-extract-plugin": "^0.4.4",
-    "node-sass": "^4.8.3",
-    "sass-loader": "^6.0.7",
-    "style-loader": "^0.20.3",
-    "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.9"
+    "dev": "next dev",
+    "build": "next build",
+    "deploy": "next build && touch out/.nojekyll && git add out/ && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages"
   },
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-redux": "^5.0.7",
-    "react-router-dom": "5.3.4",
-    "redux": "^4.0.0",
-    "redux-thunk": "^2.3.0"
+    "@types/node": "^18.11.5",
+    "@types/react-dom": "^18.0.7",
+    "@types/react": "^18.0.23",
+    "next": "latest",
+    "react-dom": "^18.2.0",
+    "react": "^18.2.0",
+    "typescript": "^4.8.4"
   }
 }

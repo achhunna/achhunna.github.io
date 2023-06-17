@@ -231,14 +231,14 @@
 
     <script>
       const override = new URL(window.location).searchParams.get(
-        "sentryOverride"
-      );
+        'sentryOverride'
+      )
       if (override || Math.floor(Math.random() * 100) <= 1) {
         document.write(
           '<script src="https://js.sentry-cdn.com/7bc8bccf5c254286a99b11c68f6bf4ce.min.js" crossorigin="anonymous">' +
-            "<" +
-            "/script>"
-        );
+            '<' +
+            '/script>'
+        )
       }
     </script>
     <script>
@@ -246,19 +246,19 @@
         window.Sentry.onLoad(function () {
           window.Sentry.init({
             maxBreadcrumbs: 30,
-            release: "69b7f983a4cd76ce65a72aa8da77d68d06b92adb",
-            environment: "prd",
+            release: '69b7f983a4cd76ce65a72aa8da77d68d06b92adb',
+            environment: 'prd',
             beforeSend: function (e, v) {
               if (
                 /amazon-adsystem|ads-us|ampproject|amp4ads|pubads|2mdn|chartbeat|gsi|bk_addPageCtx|yimg|BOOMR|boomerang/.test(
-                  (v.originalException && v.originalException.stack) || ""
+                  (v.originalException && v.originalException.stack) || ''
                 )
               )
-                return null;
-              return e;
+                return null
+              return e
             },
-          });
-        });
+          })
+        })
       }
     </script>
 
@@ -398,7 +398,7 @@
         background-color: #fff;
         border-bottom: 1px solid #e2e2e2;
         border-top: 2px solid #e2e2e2;
-        content: "";
+        content: '';
         display: block;
         height: 1px;
         margin-top: 0;
@@ -794,7 +794,7 @@
       .css-emn6zw {
         color: #567b95;
         display: none;
-        font-family: nyt-cheltenham, georgia, "times new roman", times, serif;
+        font-family: nyt-cheltenham, georgia, 'times new roman', times, serif;
         line-height: 1.18rem;
         margin-top: 5px;
         -webkit-text-decoration: none;
@@ -963,7 +963,7 @@
       }
       @media print {
         .css-10698na a[href]::after {
-          content: "";
+          content: '';
         }
         .css-10698na svg {
           fill: black;
@@ -3522,140 +3522,140 @@
                 </div>
 
                 <script type="module" data-sveltekit-hydrate="1af5fah">
-                  import { start } from "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets/_app/immutable/start-b30803d2.js";
+                  import { start } from 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets/_app/immutable/start-b30803d2.js'
 
                   start({
-                    assets: "",
+                    assets: '',
                     env: {
                       PUBLIC_BIRDKIT_PROJECT_SLUG:
-                        "2023-04-13-mag-superstorms-at-sea",
+                        '2023-04-13-mag-superstorms-at-sea',
                       PUBLIC_BIRDKIT_CSS_SCOPED_CLASS:
-                        "g-2023-04-13-mag-superstorms-at-sea",
+                        'g-2023-04-13-mag-superstorms-at-sea',
                     },
                     target: document.querySelector(
                       '[data-sveltekit-hydrate="1af5fah"]'
                     ).parentNode,
-                    version: "1683660063370",
+                    version: '1683660063370',
                     hydrate: {
                       node_ids: [0, 2],
                       data: [
-                        { type: "data", data: null, uses: {} },
+                        { type: 'data', data: null, uses: {} },
                         {
-                          type: "data",
+                          type: 'data',
                           data: {
                             body: [
                               {
-                                type: "scrollseq",
+                                type: 'scrollseq',
                                 value: {
-                                  className: "opener",
+                                  className: 'opener',
                                   layers: [
                                     {
-                                      type: "",
+                                      type: '',
                                       items: [
                                         {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fopener-bkg-mobile.jpg",
-                                          "src-desktop":
-                                            "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fopener-bkg.jpg",
-                                          className: "parallax opener-bkg",
-                                          ox: "0",
-                                          oy: "3",
-                                          x: "0",
-                                          y: "0",
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fopener-bkg-mobile.jpg',
+                                          'src-desktop':
+                                            'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fopener-bkg.jpg',
+                                          className: 'parallax opener-bkg',
+                                          ox: '0',
+                                          oy: '3',
+                                          x: '0',
+                                          y: '0',
                                         },
                                         {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fopener-mid-mobile.png",
-                                          "src-desktop":
-                                            "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fopener-mid.png",
-                                          className: "opener-mid parallax",
-                                          ox: "0",
-                                          oy: "0",
-                                          x: "0",
-                                          y: "-10",
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fopener-mid-mobile.png',
+                                          'src-desktop':
+                                            'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fopener-mid.png',
+                                          className: 'opener-mid parallax',
+                                          ox: '0',
+                                          oy: '0',
+                                          x: '0',
+                                          y: '-10',
                                         },
                                         {
-                                          src: "",
-                                          "src-desktop": "",
-                                          type: "title-card",
-                                          hed: "The Tiny Craft Mapping Superstorms at Sea",
-                                          subhed: "Hurricanes of Data",
+                                          src: '',
+                                          'src-desktop': '',
+                                          type: 'title-card',
+                                          hed: 'The Tiny Craft Mapping Superstorms at Sea',
+                                          subhed: 'Hurricanes of Data',
                                           byline:
-                                            "By \u003Cspan\u003EPorter Fox\u003C\u002Fspan\u003E",
+                                            'By \u003Cspan\u003EPorter Fox\u003C\u002Fspan\u003E',
                                         },
                                         {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fopener-wave-mobile.png",
-                                          "src-desktop":
-                                            "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fopener-wave.png",
-                                          className: "opener-wave parallax",
-                                          ox: "4",
-                                          oy: "4",
-                                          x: "-2",
-                                          y: "-4",
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fopener-wave-mobile.png',
+                                          'src-desktop':
+                                            'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fopener-wave.png',
+                                          className: 'opener-wave parallax',
+                                          ox: '4',
+                                          oy: '4',
+                                          x: '-2',
+                                          y: '-4',
                                         },
                                         {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fopener-boat-mobile.png",
-                                          "src-desktop":
-                                            "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fopener-boat.png",
-                                          className: "opener-boat  parallax",
-                                          ox: "15",
-                                          oy: "10",
-                                          x: "-20",
-                                          y: "10",
-                                        },
-                                      ],
-                                    },
-                                    {
-                                      type: "graphic",
-                                      items: [
-                                        {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fopener-map.svg",
-                                          "src-desktop": "",
-                                          type: "svg",
-                                          className: "map",
-                                        },
-                                        {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fsaildrone-icon.svg",
-                                          "src-desktop": "",
-                                          type: "svg",
-                                          className: "icon",
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fopener-boat-mobile.png',
+                                          'src-desktop':
+                                            'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fopener-boat.png',
+                                          className: 'opener-boat  parallax',
+                                          ox: '15',
+                                          oy: '10',
+                                          x: '-20',
+                                          y: '10',
                                         },
                                       ],
                                     },
                                     {
-                                      type: "graphic",
+                                      type: 'graphic',
                                       items: [
                                         {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fsaildrone-measurements.svg",
-                                          "src-desktop": "",
-                                          type: "svg",
-                                          className: "opener-saildrone",
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fopener-map.svg',
+                                          'src-desktop': '',
+                                          type: 'svg',
+                                          className: 'map',
+                                        },
+                                        {
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fsaildrone-icon.svg',
+                                          'src-desktop': '',
+                                          type: 'svg',
+                                          className: 'icon',
                                         },
                                       ],
                                     },
                                     {
-                                      type: "graphic",
+                                      type: 'graphic',
                                       items: [
                                         {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fsaildrone-sensors.svg",
-                                          "src-desktop": "",
-                                          type: "svg",
-                                          className: "opener-saildrone",
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fsaildrone-measurements.svg',
+                                          'src-desktop': '',
+                                          type: 'svg',
+                                          className: 'opener-saildrone',
                                         },
                                       ],
                                     },
                                     {
-                                      type: "graphic",
+                                      type: 'graphic',
                                       items: [
                                         {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fopener-map.svg",
-                                          "src-desktop": "",
-                                          type: "svg",
-                                          className: "map",
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fsaildrone-sensors.svg',
+                                          'src-desktop': '',
+                                          type: 'svg',
+                                          className: 'opener-saildrone',
+                                        },
+                                      ],
+                                    },
+                                    {
+                                      type: 'graphic',
+                                      items: [
+                                        {
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fopener-map.svg',
+                                          'src-desktop': '',
+                                          type: 'svg',
+                                          className: 'map',
                                         },
                                         {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fsaildrone-icon.svg",
-                                          "src-desktop": "",
-                                          type: "svg",
-                                          className: "icon",
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fsaildrone-icon.svg',
+                                          'src-desktop': '',
+                                          type: 'svg',
+                                          className: 'icon',
                                         },
                                       ],
                                     },
@@ -3664,49 +3664,49 @@
                                     {
                                       copy: [
                                         {
-                                          text: "",
+                                          text: '',
                                           illobyline:
-                                            "Illustrations by \u003Cspan\u003EWesley Allsbrook\u003C\u002Fspan\u003E",
+                                            'Illustrations by \u003Cspan\u003EWesley Allsbrook\u003C\u002Fspan\u003E',
                                           graphicbyline:
-                                            "Infographics by \u003Cspan\u003ELa Tigre\u003C\u002Fspan\u003E",
+                                            'Infographics by \u003Cspan\u003ELa Tigre\u003C\u002Fspan\u003E',
                                           share: true,
                                         },
                                         {
-                                          text: "Shortly after dawn on Sept. 30, 2021, Richard Jenkins watched a Category 4 hurricane overrun his life’s work.",
-                                          illobyline: "",
-                                          graphicbyline: "",
+                                          text: 'Shortly after dawn on Sept. 30, 2021, Richard Jenkins watched a Category 4 hurricane overrun his life’s work.',
+                                          illobyline: '',
+                                          graphicbyline: '',
                                         },
                                       ],
-                                      className: "opener",
+                                      className: 'opener',
                                     },
                                     {
                                       copy: [
                                         {
-                                          text: "The North Atlantic storm was a behemoth — 50,000 feet tall and 260 miles wide. Wind circled the eye wall at 143 miles per hour; waves the size of nine-story apartment buildings tumbled through a confused sea.",
+                                          text: 'The North Atlantic storm was a behemoth — 50,000 feet tall and 260 miles wide. Wind circled the eye wall at 143 miles per hour; waves the size of nine-story apartment buildings tumbled through a confused sea.',
                                         },
                                         {
-                                          text: "Puerto Rico lay 500 miles to the southwest; Bermuda was 800 miles straight ahead. Eighty miles northwest, the 23-foot boat that Jenkins had designed and built over the last decade struggled to stay upright.",
-                                        },
-                                      ],
-                                    },
-                                    {
-                                      copy: [
-                                        {
-                                          text: "Saildrone Explorer SD 1045 was a research boat. Its blaze-orange torpedo-shaped hull had a deep keel and a rigid carbon-fiber sail engineered to withstand hurricane-force wind and waves.",
+                                          text: 'Puerto Rico lay 500 miles to the southwest; Bermuda was 800 miles straight ahead. Eighty miles northwest, the 23-foot boat that Jenkins had designed and built over the last decade struggled to stay upright.',
                                         },
                                       ],
                                     },
                                     {
                                       copy: [
                                         {
-                                          text: "Probes, antennae and a suite of meteorological and oceanographic instruments jutted from the deck and the hull, all powered by wind, water and sun and capable of measuring the extraordinary forces of the open ocean.",
+                                          text: 'Saildrone Explorer SD 1045 was a research boat. Its blaze-orange torpedo-shaped hull had a deep keel and a rigid carbon-fiber sail engineered to withstand hurricane-force wind and waves.',
                                         },
                                       ],
                                     },
                                     {
                                       copy: [
                                         {
-                                          text: "As the name suggests, SD 1045 was unmanned, allowing the boat to operate in some of the most remote and inhospitable corners of the planet for up to 12 months at a time without being serviced.",
+                                          text: 'Probes, antennae and a suite of meteorological and oceanographic instruments jutted from the deck and the hull, all powered by wind, water and sun and capable of measuring the extraordinary forces of the open ocean.',
+                                        },
+                                      ],
+                                    },
+                                    {
+                                      copy: [
+                                        {
+                                          text: 'As the name suggests, SD 1045 was unmanned, allowing the boat to operate in some of the most remote and inhospitable corners of the planet for up to 12 months at a time without being serviced.',
                                         },
                                       ],
                                     },
@@ -3714,410 +3714,410 @@
                                 },
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "Throughout history, most sea captains have tried to steer their vessels out of extreme weather, but the whole purpose of SD 1045 was to steer into it. “The goal was not just to get into the hurricane but to get to the strongest quarter,” Jenkins said as we watched a video of the storm, shot from SD 1045’s masthead camera. “The big engineering challenge was to create enough sailing power to get in front of the storm, but not so much power that the storm destroys the boat.”",
+                                  'Throughout history, most sea captains have tried to steer their vessels out of extreme weather, but the whole purpose of SD 1045 was to steer into it. “The goal was not just to get into the hurricane but to get to the strongest quarter,” Jenkins said as we watched a video of the storm, shot from SD 1045’s masthead camera. “The big engineering challenge was to create enough sailing power to get in front of the storm, but not so much power that the storm destroys the boat.”',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "Jenkins and a crew of pilots in Saildrone’s cavernous mission-control room, set in a 1930s Navy hangar on the shores of San Francisco Bay, had been using a satellite link for months to maneuver SD 1045 and four sister ships into North Atlantic hurricanes. The boats were frequently caught in doldrums and set back by powerful ocean currents skirting the East Coast of the United States. That August, a sister ship, SD 1031, successfully entered Tropical Storm Henri, but only in its early stages. With a few weeks left in the 2021 hurricane season, SD 1045 appeared to be the last opportunity to get a Saildrone inside a major hurricane, where it would try to harvest data that could help scientists develop a more sophisticated understanding of why such storms’ intensity has spiked over the last half-century.",
+                                  'Jenkins and a crew of pilots in Saildrone’s cavernous mission-control room, set in a 1930s Navy hangar on the shores of San Francisco Bay, had been using a satellite link for months to maneuver SD 1045 and four sister ships into North Atlantic hurricanes. The boats were frequently caught in doldrums and set back by powerful ocean currents skirting the East Coast of the United States. That August, a sister ship, SD 1031, successfully entered Tropical Storm Henri, but only in its early stages. With a few weeks left in the 2021 hurricane season, SD 1045 appeared to be the last opportunity to get a Saildrone inside a major hurricane, where it would try to harvest data that could help scientists develop a more sophisticated understanding of why such storms’ intensity has spiked over the last half-century.',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
                                   'As climate change has accelerated, warmer atmospheric and ocean temperatures have increased the likelihood of a hurricane developing into a Category 3 storm or higher by \u003Ca href="https:\u002F\u002Fwww.climatecentral.org\u002Fclimate-matters\u002F2020-stronger-hurricanes"\u003E8 percent per decade\u003C\u002Fa\u003E. While the total number of tropical cyclones — including “typhoons” and “cyclones” — around the world has dropped over the last century, in the North Atlantic more Category 4 and 5 hurricanes made landfall in the United States from 2017 to 2021 than from 1963 to 2016. Globally, the number of major hurricanes, including a new breed of ultraintense Category 5 storms with \u003Ca href="https:\u002F\u002Fyaleclimateconnections.org\u002F2020\u002F08\u002Fclimate-change-is-causing-more-rapid-intensification-of-atlantic-hurricanes\u002F"\u003Ewinds of at least 190 m.p.h.\u003C\u002Fa\u003E, could increase by 20 percent over the next 60 to 80 years. Once-established storm tracks are simultaneously changing as hurricanes last longer and \u003Ca href="https:\u002F\u002Fwww.nature.com\u002Farticles\u002Fd41586-020-03118-2"\u003Epenetrate deeper over land\u003C\u002Fa\u003E. According to a 2021 study by Yale University researchers, warmer waters will soon draw extreme storms north as well, threatening to inundate densely populated cities like \u003Ca href="https:\u002F\u002Fnews.yale.edu\u002F2022\u002F01\u002F03\u002Ffuture-hurricanes-will-roam-over-more-earth-study-predicts"\u003EWashington, D.C.; New York; Providence, R.I.; and Boston\u003C\u002Fa\u003E.',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
                                   'Storm surges now ride on an elevated sea level, flooding coastlines with walls of water more than 25 feet high (Hurricane Katrina, 2005). Because a warmer atmosphere can hold more moisture, storms can now dump more than 60 inches of rain on a single region (Hurricane Harvey, 2017). Hurricanes over the United States have also \u003Ca href="https:\u002F\u002Fnews.wisc.edu\u002Fhurricanes-are-slowing-down-and-thats-bad-news\u002F"\u003Eslowed more than 15 percent since 1947\u003C\u002Fa\u003E, contributing to a 25 percent increase in local rainfall. One example of how the compounding forces of climate change, like sea-level rise, and more intense storms are overwhelming coastlines, according to Kerry Emanuel of the Massachusetts Institute of Technology: If Superstorm Sandy had occurred in 1912 instead of 2012, \u003Ca href="https:\u002F\u002Fwww.theguardian.com\u002Fworld\u002F2016\u002Foct\u002F05\u002Fclimate-change-hurricane-matthew-sea-level-rise"\u003Eit may not have flooded Lower Manhattan\u003C\u002Fa\u003E.',
                               },
                               {
-                                type: "illoseq",
+                                type: 'illoseq',
                                 value: {
-                                  className: "seq2",
+                                  className: 'seq2',
                                   items: [
                                     {
-                                      src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq2-bkg-mobile.jpg",
-                                      "src-desktop":
-                                        "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq2-bkg.jpg",
-                                      className: "seq2-bkg parallax",
+                                      src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq2-bkg-mobile.jpg',
+                                      'src-desktop':
+                                        'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq2-bkg.jpg',
+                                      className: 'seq2-bkg parallax',
                                     },
                                     {
-                                      src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq2-mid-mobile.png",
-                                      "src-desktop":
-                                        "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq2-mid.png",
-                                      className: "seq2-mid parallax",
+                                      src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq2-mid-mobile.png',
+                                      'src-desktop':
+                                        'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq2-mid.png',
+                                      className: 'seq2-mid parallax',
                                     },
                                     {
-                                      src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq2-fg-mobile.png",
-                                      "src-desktop":
-                                        "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq2-fg.png",
-                                      className: "seq2-fg parallax",
+                                      src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq2-fg-mobile.png',
+                                      'src-desktop':
+                                        'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq2-fg.png',
+                                      className: 'seq2-fg parallax',
                                     },
                                   ],
                                   copy: [
                                     {
-                                      text: "Humanity has not flinched in the face of this gathering threat, but has rather charged blindly into it, migrating to coastlines at a record pace, enacting deficient building codes and resiliency plans, pumping ever more carbon into the atmosphere and even slowing mitigation efforts by questioning the veracity of climate change.",
+                                      text: 'Humanity has not flinched in the face of this gathering threat, but has rather charged blindly into it, migrating to coastlines at a record pace, enacting deficient building codes and resiliency plans, pumping ever more carbon into the atmosphere and even slowing mitigation efforts by questioning the veracity of climate change.',
                                     },
                                   ],
                                 },
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "Humans didn’t always settle in a manner so disconnected from the planet: Overlay storm tracks from the last two centuries on a map of the world, and you’ll notice how, throughout history, most major cities were built outside their reach. As that reach and intensity grows farther and faster than any time in the last three million years, another reality becomes painfully evident: Civilization can’t relocate as it once could, leaving millions of people smack in the cross hairs of severe storms with little to no resiliency, warning or even plan.",
+                                  'Humans didn’t always settle in a manner so disconnected from the planet: Overlay storm tracks from the last two centuries on a map of the world, and you’ll notice how, throughout history, most major cities were built outside their reach. As that reach and intensity grows farther and faster than any time in the last three million years, another reality becomes painfully evident: Civilization can’t relocate as it once could, leaving millions of people smack in the cross hairs of severe storms with little to no resiliency, warning or even plan.',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
                                   'At risk on the U.S. mainland are \u003Ca href="https:\u002F\u002Fwww.boem.gov\u002Fsites\u002Fdefault\u002Ffiles\u002Fdocuments\u002Frenewable-energy\u002Fstate-activities\u002FImpact-Producing-Factors-in-the-Offshore-Wind-Cumulative-Impacts-Scenario-on-the-South-Atlantic.pdf"\u003E60 million coastal residents from Texas to Maine\u003C\u002Fa\u003E. Along the Gulf and Atlantic Coasts, you will find a dozen major seaside cities, thousands of coastal towns, half of the nation’s oil-refining business and major infrastructure like highways, airports, freight-rail lines and much of the shipping industry, which is already backed up globally with supply-chain issues as it transports, by tonnage, 90 percent of all trade across the ocean. A recent N.P.R. analysis of National Hurricane Center data revealed that 720,000 residents of Miami, Washington and New York are in danger of being flooded by rising sea levels and storm surge. In the last four decades alone, hurricanes cost the United States more than $1.1 trillion and nearly 7,000 lives. By the end of the century, they could set the United States back over $100 billion annually.',
                               },
-                              { type: "ad", value: { id: 0 } },
+                              { type: 'ad', value: { id: 0 } },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "\u003Cstrong\u003EJenkins knows \u003C\u002Fstrong\u003Efirsthand the ferocity of maritime storms. His windswept hair and tanned crow’s feet are more befitting a sea captain than a San Francisco tech entrepreneur. He grew up building boats in Southampton, England, then sailed yachts around Europe and the Mediterranean as a delivery captain. He prefers two-dimensional landscapes to the hustle of the city. After studying mechanical engineering at Imperial College London, he spent a decade car-camping in salt flats and dry lake beds around the world, trying to best the obscure (yet highly competitive) land-speed record for a wind-powered vehicle. When he finally broke it — and almost himself, while steering the land yacht at 126 m.p.h. across the Mojave Desert — he pivoted his design to ocean sailing and a new mission: building the first unmanned boat to sail around the world.",
+                                  '\u003Cstrong\u003EJenkins knows \u003C\u002Fstrong\u003Efirsthand the ferocity of maritime storms. His windswept hair and tanned crow’s feet are more befitting a sea captain than a San Francisco tech entrepreneur. He grew up building boats in Southampton, England, then sailed yachts around Europe and the Mediterranean as a delivery captain. He prefers two-dimensional landscapes to the hustle of the city. After studying mechanical engineering at Imperial College London, he spent a decade car-camping in salt flats and dry lake beds around the world, trying to best the obscure (yet highly competitive) land-speed record for a wind-powered vehicle. When he finally broke it — and almost himself, while steering the land yacht at 126 m.p.h. across the Mojave Desert — he pivoted his design to ocean sailing and a new mission: building the first unmanned boat to sail around the world.',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "Jenkins found an unlikely partner in the National Oceanic and Atmospheric Administration, the sprawling parent organization of all U.S. weather agencies. Hurricane research, modeling and forecasting requires many terabytes of data for every square mile the storm passes through, including vitally important sea-level data from inside a storm. This has, for obvious reasons, been nearly impossible to obtain. Several generations of automated buoys, subsurface sea gliders and dropsondes — launched from turboprop Hurricane Hunter aircraft in the middle of a storm — have been employed to measure the “planetary boundary” between sea and sky, where a hurricane gets its power. But most of the devices offer only a snapshot of conditions. Jenkins’s contribution to the endeavor is a Swiss Army knife of oceanic observation that can maneuver into a storm and measure air, surface and subsea data in real time, without the cost of fuel, provisions or human lives.",
+                                  'Jenkins found an unlikely partner in the National Oceanic and Atmospheric Administration, the sprawling parent organization of all U.S. weather agencies. Hurricane research, modeling and forecasting requires many terabytes of data for every square mile the storm passes through, including vitally important sea-level data from inside a storm. This has, for obvious reasons, been nearly impossible to obtain. Several generations of automated buoys, subsurface sea gliders and dropsondes — launched from turboprop Hurricane Hunter aircraft in the middle of a storm — have been employed to measure the “planetary boundary” between sea and sky, where a hurricane gets its power. But most of the devices offer only a snapshot of conditions. Jenkins’s contribution to the endeavor is a Swiss Army knife of oceanic observation that can maneuver into a storm and measure air, surface and subsea data in real time, without the cost of fuel, provisions or human lives.',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "Jenkins walked me around the Saildrone factory floor that morning, speaking quickly, often without pausing for minutes or even an hour at a time. He plays the role of engineer, chief executive, inventor, climatologist, oceanographer, naval architect and captain on any given day — a corporeal C.P.U. of the company. He touched on everything from hydrodynamics to hurricane structure to electrical engineering and bathymetry — ocean mapping — as we wandered among four neat rows of gleaming Saildrone hulls. Gunmetal-gray steel racks and wheeled carts held appendages and instruments, all fabricated in-house and “ruggedized” by Saildrone and NOAA. The company is based in Alameda Point, a hub of the techno-utopianism that has swept through the Bay Area. (Jenkins occasionally commutes by motorboat from his home in Alameda.) Just down the block, researchers are developing a safer nuclear reactor. A few doors away is the former factory of Makani, a project founded by a consortium of kite-surfing inventors who added wind turbines to giant kites to create energy, à la Ben Franklin.",
+                                  'Jenkins walked me around the Saildrone factory floor that morning, speaking quickly, often without pausing for minutes or even an hour at a time. He plays the role of engineer, chief executive, inventor, climatologist, oceanographer, naval architect and captain on any given day — a corporeal C.P.U. of the company. He touched on everything from hydrodynamics to hurricane structure to electrical engineering and bathymetry — ocean mapping — as we wandered among four neat rows of gleaming Saildrone hulls. Gunmetal-gray steel racks and wheeled carts held appendages and instruments, all fabricated in-house and “ruggedized” by Saildrone and NOAA. The company is based in Alameda Point, a hub of the techno-utopianism that has swept through the Bay Area. (Jenkins occasionally commutes by motorboat from his home in Alameda.) Just down the block, researchers are developing a safer nuclear reactor. A few doors away is the former factory of Makani, a project founded by a consortium of kite-surfing inventors who added wind turbines to giant kites to create energy, à la Ben Franklin.',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "A half-dozen workers meandered between boats as Jenkins took me to the boardroom to watch the video of SD 1045. Wind gusts hit 120 m.p.h. in what would become one of the longest-lasting North Atlantic hurricanes on record. Hurricane Sam had recently reorganized and ratcheted up from Category 3 to the upper range of Category 4. Sea spray and rain turned the air into a foggy emulsion; breaking waves slammed the boat with the force of a tractor-trailer. Two hours later, on the edge of the eye wall, the scene on Jenkins’s screen became otherworldly, with 143-m.p.h. gusts and 89-foot waves.",
+                                  'A half-dozen workers meandered between boats as Jenkins took me to the boardroom to watch the video of SD 1045. Wind gusts hit 120 m.p.h. in what would become one of the longest-lasting North Atlantic hurricanes on record. Hurricane Sam had recently reorganized and ratcheted up from Category 3 to the upper range of Category 4. Sea spray and rain turned the air into a foggy emulsion; breaking waves slammed the boat with the force of a tractor-trailer. Two hours later, on the edge of the eye wall, the scene on Jenkins’s screen became otherworldly, with 143-m.p.h. gusts and 89-foot waves.',
                               },
-                              { type: "ad", value: { id: 1 } },
+                              { type: 'ad', value: { id: 1 } },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "Few vessels could withstand the vectors moving through the North Atlantic that day. (In 2015, Hurricane Joaquin’s monster waves severed the top two decks of the steel freighter El Faro’s superstructure, sending the 790-foot ship to the bottom of the ocean along with all 33 crew members.) But SD 1045 persevered, its gauges recording multiple knockdowns, 360-degree capsizes and a 30-m.p.h. sleigh ride down the back of a giant wave.",
-                              },
-                              {
-                                type: "text",
-                                value:
-                                  "As the pilot managed to maneuver the ship closer to the storm’s eye — a Dantesque arena of minitornadoes, falling sheets of ice, hot tower thunderheads and torrential wind and rain bands — Jenkins and a dozen NOAA scientists across the country turned to a never-before-seen stream of data broadcast from the heart of the hurricane: air temperature, relative humidity, barometric pressure, wind speed and direction, water temperature, salinity, sea-surface temperature and wave height. Watching it was like watching transmissions from a Mars rover — columns of numbers and decimal points broadcast from an alien world gradually sketching a detailed picture of the cyclone. If this level of data could consistently be harvested from hurricanes at sea, Jenkins and his colleagues realized, it could very well change our understanding of one of the most damaging, costly and deadly forms of natural disaster in the world.",
+                                  'Few vessels could withstand the vectors moving through the North Atlantic that day. (In 2015, Hurricane Joaquin’s monster waves severed the top two decks of the steel freighter El Faro’s superstructure, sending the 790-foot ship to the bottom of the ocean along with all 33 crew members.) But SD 1045 persevered, its gauges recording multiple knockdowns, 360-degree capsizes and a 30-m.p.h. sleigh ride down the back of a giant wave.',
                               },
                               {
-                                type: "illoseq",
+                                type: 'text',
+                                value:
+                                  'As the pilot managed to maneuver the ship closer to the storm’s eye — a Dantesque arena of minitornadoes, falling sheets of ice, hot tower thunderheads and torrential wind and rain bands — Jenkins and a dozen NOAA scientists across the country turned to a never-before-seen stream of data broadcast from the heart of the hurricane: air temperature, relative humidity, barometric pressure, wind speed and direction, water temperature, salinity, sea-surface temperature and wave height. Watching it was like watching transmissions from a Mars rover — columns of numbers and decimal points broadcast from an alien world gradually sketching a detailed picture of the cyclone. If this level of data could consistently be harvested from hurricanes at sea, Jenkins and his colleagues realized, it could very well change our understanding of one of the most damaging, costly and deadly forms of natural disaster in the world.',
+                              },
+                              {
+                                type: 'illoseq',
                                 value: {
-                                  className: "seq3",
+                                  className: 'seq3',
                                   items: [
                                     {
-                                      src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq3-bkg-mobile.jpg",
-                                      "src-desktop":
-                                        "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq3-bkg.jpg",
-                                      className: "seq3-bkg parallax",
+                                      src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq3-bkg-mobile.jpg',
+                                      'src-desktop':
+                                        'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq3-bkg.jpg',
+                                      className: 'seq3-bkg parallax',
                                     },
                                     {
-                                      src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq3-mid-mobile.png",
-                                      "src-desktop":
-                                        "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq3-mid.png",
-                                      className: "seq3-mid parallax",
+                                      src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq3-mid-mobile.png',
+                                      'src-desktop':
+                                        'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq3-mid.png',
+                                      className: 'seq3-mid parallax',
                                     },
                                     {
-                                      src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq3-octopus-mobile.png",
-                                      "src-desktop":
-                                        "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq3-octopus.png",
-                                      className: "seq3-octopus parallax",
+                                      src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq3-octopus-mobile.png',
+                                      'src-desktop':
+                                        'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq3-octopus.png',
+                                      className: 'seq3-octopus parallax',
                                     },
                                     {
-                                      src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq3-fg-mobile.png",
-                                      "src-desktop":
-                                        "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq3-fg.png",
-                                      className: "seq3-fg parallax",
+                                      src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq3-fg-mobile.png',
+                                      'src-desktop':
+                                        'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq3-fg.png',
+                                      className: 'seq3-fg parallax',
                                     },
                                   ],
                                   copy: [
                                     {
-                                      text: "\u003Cstrong\u003EThe ocean \u003C\u002Fstrong\u003Eis a terrestrial outer space — Earth’s last true wilderness, which remains surprisingly unexplored by humankind.",
+                                      text: '\u003Cstrong\u003EThe ocean \u003C\u002Fstrong\u003Eis a terrestrial outer space — Earth’s last true wilderness, which remains surprisingly unexplored by humankind.',
                                     },
                                   ],
                                 },
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "It stretches for 139 million square miles and is on average more than 10,000 feet deep. Anyone who has spent time on or near it knows that watching the sea is like watching a fire: It is always transforming, moving, reordering as it mixes and flows. It is no more a “thing” than deep space is a thing — more conceptual than it is representational. It is \u003Cem\u003Ephysis\u003C\u002Fem\u003E, as the ancient Greeks wrote, translated as “nature,” “creation” or “growth.”",
+                                  'It stretches for 139 million square miles and is on average more than 10,000 feet deep. Anyone who has spent time on or near it knows that watching the sea is like watching a fire: It is always transforming, moving, reordering as it mixes and flows. It is no more a “thing” than deep space is a thing — more conceptual than it is representational. It is \u003Cem\u003Ephysis\u003C\u002Fem\u003E, as the ancient Greeks wrote, translated as “nature,” “creation” or “growth.”',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
                                   'The quest to study the sea and its storms predates \u003Ca href="https:\u002F\u002Fwww.loebclassics.com\u002Fview\u002Faristotle-meteorlogica\u002F1952\u002Fpb_LCL397.3.xml"\u003EAristotle, who hypothesized\u003C\u002Fa\u003E that Earth’s oceans were frigid at the poles and too hot to inhabit near the Equator. Half a century before Christopher Columbus’s first voyage across the Atlantic, Prince Henry the Navigator of Portugal dispatched a series of expeditions along the coast of Africa in what was in part one of the first Western maritime data-harvesting missions in history. (Keep in mind that sea monsters were considered a navigational hazard by many at the time.) His captains returned with observations detailing sea temperature, zoological discoveries and curious and persistent winds and currents, the \u003Cem\u003Evolta do mar\u003C\u002Fem\u003E, that allowed them to sail with the breeze behind them in a giant circle from Portugal down to the Canary Islands, up to the Azores and home. Over the next 400 years, these and other “trade winds” and the currents they pushed would carry human civilization around the world, along with a breed of superstorm unknown to Westerners.',
                               },
                               {
-                                type: "scrollseq",
+                                type: 'scrollseq',
                                 value: {
-                                  className: "meta",
+                                  className: 'meta',
                                   layers: [
                                     {
-                                      type: "graphic",
-                                      ox: "0",
-                                      x: "0",
-                                      oy: "-5",
-                                      y: "-5",
+                                      type: 'graphic',
+                                      ox: '0',
+                                      x: '0',
+                                      oy: '-5',
+                                      y: '-5',
                                       items: [
                                         {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fmeta-000.svg",
-                                          "src-desktop": "",
-                                          type: "svg",
-                                          className: "meta0",
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fmeta-000.svg',
+                                          'src-desktop': '',
+                                          type: 'svg',
+                                          className: 'meta0',
                                         },
                                       ],
                                     },
                                     {
-                                      type: "graphic",
-                                      ox: "0",
-                                      x: "0",
-                                      oy: "-5",
-                                      y: "-5",
+                                      type: 'graphic',
+                                      ox: '0',
+                                      x: '0',
+                                      oy: '-5',
+                                      y: '-5',
                                       items: [
                                         {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fmeta-001.svg",
-                                          "src-desktop": "",
-                                          type: "svg",
-                                          className: "meta1",
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fmeta-001.svg',
+                                          'src-desktop': '',
+                                          type: 'svg',
+                                          className: 'meta1',
                                         },
                                       ],
                                     },
                                     {
-                                      type: "graphic",
-                                      ox: "0",
-                                      x: "0",
-                                      oy: "-5",
-                                      y: "-5",
+                                      type: 'graphic',
+                                      ox: '0',
+                                      x: '0',
+                                      oy: '-5',
+                                      y: '-5',
                                       items: [
                                         {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fmeta-002.svg",
-                                          "src-desktop": "",
-                                          type: "svg",
-                                          className: "meta2",
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fmeta-002.svg',
+                                          'src-desktop': '',
+                                          type: 'svg',
+                                          className: 'meta2',
                                         },
                                       ],
                                     },
                                     {
-                                      type: "graphic",
-                                      ox: "0",
-                                      x: "0",
-                                      oy: "-5",
-                                      y: "-5",
+                                      type: 'graphic',
+                                      ox: '0',
+                                      x: '0',
+                                      oy: '-5',
+                                      y: '-5',
                                       items: [
                                         {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fmeta-003.svg",
-                                          "src-desktop": "",
-                                          type: "svg",
-                                          className: "meta3",
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fmeta-003.svg',
+                                          'src-desktop': '',
+                                          type: 'svg',
+                                          className: 'meta3',
                                         },
                                       ],
                                     },
                                     {
-                                      type: "graphic",
-                                      ox: "0",
-                                      x: "25",
-                                      oy: "-5",
-                                      y: "-5",
+                                      type: 'graphic',
+                                      ox: '0',
+                                      x: '25',
+                                      oy: '-5',
+                                      y: '-5',
                                       items: [
                                         {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fmeta-004.svg",
-                                          "src-desktop": "",
-                                          type: "svg",
-                                          className: "meta4",
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fmeta-004.svg',
+                                          'src-desktop': '',
+                                          type: 'svg',
+                                          className: 'meta4',
                                         },
                                       ],
                                     },
                                     {
-                                      type: "graphic",
-                                      ox: "25",
-                                      x: "32",
-                                      oy: "-5",
-                                      y: "-5",
+                                      type: 'graphic',
+                                      ox: '25',
+                                      x: '32',
+                                      oy: '-5',
+                                      y: '-5',
                                       items: [
                                         {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fmeta-005.svg",
-                                          "src-desktop": "",
-                                          type: "svg",
-                                          className: "meta5",
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fmeta-005.svg',
+                                          'src-desktop': '',
+                                          type: 'svg',
+                                          className: 'meta5',
                                         },
                                       ],
                                     },
                                     {
-                                      type: "graphic",
-                                      ox: "32",
-                                      x: "45",
-                                      oy: "-5",
-                                      y: "-5",
+                                      type: 'graphic',
+                                      ox: '32',
+                                      x: '45',
+                                      oy: '-5',
+                                      y: '-5',
                                       items: [
                                         {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fmeta-006.svg",
-                                          "src-desktop": "",
-                                          type: "svg",
-                                          className: "meta6",
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fmeta-006.svg',
+                                          'src-desktop': '',
+                                          type: 'svg',
+                                          className: 'meta6',
                                         },
                                       ],
                                     },
                                     {
-                                      type: "graphic",
-                                      ox: "45",
-                                      x: "45",
-                                      oy: "-5",
-                                      y: "-5",
+                                      type: 'graphic',
+                                      ox: '45',
+                                      x: '45',
+                                      oy: '-5',
+                                      y: '-5',
                                       items: [
                                         {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fmeta-007.svg",
-                                          "src-desktop": "",
-                                          type: "svg",
-                                          className: "meta7",
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fmeta-007.svg',
+                                          'src-desktop': '',
+                                          type: 'svg',
+                                          className: 'meta7',
                                         },
                                       ],
                                     },
                                     {
-                                      type: "graphic",
-                                      ox: "45",
-                                      x: "45",
-                                      oy: "-5",
-                                      y: "-5",
+                                      type: 'graphic',
+                                      ox: '45',
+                                      x: '45',
+                                      oy: '-5',
+                                      y: '-5',
                                       items: [
                                         {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fmeta-008.svg",
-                                          "src-desktop": "",
-                                          type: "svg",
-                                          className: "meta8",
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fmeta-008.svg',
+                                          'src-desktop': '',
+                                          type: 'svg',
+                                          className: 'meta8',
                                         },
                                       ],
                                     },
                                     {
-                                      type: "graphic",
-                                      ox: "45",
-                                      x: "35",
-                                      oy: "-5",
-                                      y: "0",
+                                      type: 'graphic',
+                                      ox: '45',
+                                      x: '35',
+                                      oy: '-5',
+                                      y: '0',
                                       items: [
                                         {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fmeta-009.svg",
-                                          "src-desktop": "",
-                                          type: "svg",
-                                          className: "meta9",
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fmeta-009.svg',
+                                          'src-desktop': '',
+                                          type: 'svg',
+                                          className: 'meta9',
                                         },
                                       ],
                                     },
                                     {
-                                      type: "graphic",
-                                      ox: "35",
-                                      x: "35",
-                                      oy: "0",
-                                      y: "0",
+                                      type: 'graphic',
+                                      ox: '35',
+                                      x: '35',
+                                      oy: '0',
+                                      y: '0',
                                       items: [
                                         {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fmeta-010.svg",
-                                          "src-desktop": "",
-                                          type: "svg",
-                                          className: "meta10",
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fmeta-010.svg',
+                                          'src-desktop': '',
+                                          type: 'svg',
+                                          className: 'meta10',
                                         },
                                       ],
                                     },
                                     {
-                                      type: "graphic",
-                                      ox: "35",
-                                      x: "35",
-                                      oy: "0",
-                                      y: "0",
+                                      type: 'graphic',
+                                      ox: '35',
+                                      x: '35',
+                                      oy: '0',
+                                      y: '0',
                                       items: [
                                         {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fmeta-011.svg",
-                                          "src-desktop": "",
-                                          type: "svg",
-                                          className: "meta11",
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fmeta-011.svg',
+                                          'src-desktop': '',
+                                          type: 'svg',
+                                          className: 'meta11',
                                         },
                                       ],
                                     },
                                   ],
                                   slides: [
-                                    { copy: [], className: "meta1" },
+                                    { copy: [], className: 'meta1' },
                                     {
                                       copy: [
                                         {
-                                          text: "The seed of Hurricane Sam took shape over the African Sahel 11 days before SD 1045 encountered it.",
+                                          text: 'The seed of Hurricane Sam took shape over the African Sahel 11 days before SD 1045 encountered it.',
                                         },
                                       ],
                                     },
                                     {
                                       copy: [
                                         {
-                                          text: "It’s here that the hot, dry Sahara meets cooler savannas to the south, creating an easterly wind called the African Easterly Jet. Instability in the jet frequently forms low-pressure areas that move west toward the Atlantic.",
+                                          text: 'It’s here that the hot, dry Sahara meets cooler savannas to the south, creating an easterly wind called the African Easterly Jet. Instability in the jet frequently forms low-pressure areas that move west toward the Atlantic.',
                                         },
                                       ],
                                     },
                                     {
                                       copy: [
                                         {
-                                          text: "With enough moisture, convection and atmospheric turmoil, these “tropical waves” can form a cluster of powerful thunderstorms. Around 60 tropical waves pass through the region every year, ultimately forming most major Atlantic hurricanes.",
+                                          text: 'With enough moisture, convection and atmospheric turmoil, these “tropical waves” can form a cluster of powerful thunderstorms. Around 60 tropical waves pass through the region every year, ultimately forming most major Atlantic hurricanes.',
                                         },
                                       ],
                                     },
                                     {
                                       copy: [
                                         {
-                                          text: "One such wave moved off the African coast on Sept. 19, 2021.",
+                                          text: 'One such wave moved off the African coast on Sept. 19, 2021.',
                                         },
                                         {
-                                          text: "Three days later, southwest of the Cabo Verde Islands, it was hooked, jarred, twisted or, as some cultures believe, touched by the hand of a god, initiating enough convective banding features and low-level circulation to be upgraded to a tropical depression.",
-                                        },
-                                      ],
-                                    },
-                                    {
-                                      copy: [
-                                        {
-                                          text: "The next day, the depression was upgraded to a tropical storm and officially given the name Sam.",
+                                          text: 'Three days later, southwest of the Cabo Verde Islands, it was hooked, jarred, twisted or, as some cultures believe, touched by the hand of a god, initiating enough convective banding features and low-level circulation to be upgraded to a tropical depression.',
                                         },
                                       ],
                                     },
                                     {
                                       copy: [
                                         {
-                                          text: "Warm water and low vertical wind shear helped induce a period of rapid intensification, and Sam was upgraded to a Category 1 hurricane with wind speeds of 75 m.p.h. A second rapid intensification event saw wind speeds jump by 50 m.p.h. in a 24-hour period. Sam strengthened to a Category 4 hurricane, with peak winds reaching 155 m.p.h., just below the threshold of a Category 5 storm.",
+                                          text: 'The next day, the depression was upgraded to a tropical storm and officially given the name Sam.',
                                         },
                                       ],
                                     },
                                     {
                                       copy: [
                                         {
-                                          text: "Sam moved northwest and weakened for several days because of southwesterly wind shear.",
+                                          text: 'Warm water and low vertical wind shear helped induce a period of rapid intensification, and Sam was upgraded to a Category 1 hurricane with wind speeds of 75 m.p.h. A second rapid intensification event saw wind speeds jump by 50 m.p.h. in a 24-hour period. Sam strengthened to a Category 4 hurricane, with peak winds reaching 155 m.p.h., just below the threshold of a Category 5 storm.',
                                         },
                                       ],
                                     },
                                     {
                                       copy: [
                                         {
-                                          text: "It strengthened again over warmer water 500 miles northeast of Puerto Rico — where it met SD 1045.",
+                                          text: 'Sam moved northwest and weakened for several days because of southwesterly wind shear.',
                                         },
                                       ],
                                     },
                                     {
                                       copy: [
                                         {
-                                          text: "Sam passed within 200 miles of Bermuda, as its outer circulation expanded, brushing the island with tropical storm-force winds.",
+                                          text: 'It strengthened again over warmer water 500 miles northeast of Puerto Rico — where it met SD 1045.',
                                         },
                                       ],
                                     },
                                     {
                                       copy: [
                                         {
-                                          text: "It lost power as it moved northeastward over colder water. The system’s cloud pattern eventually became asymmetric and Sam was downgraded to a post-tropical cyclone.",
+                                          text: 'Sam passed within 200 miles of Bermuda, as its outer circulation expanded, brushing the island with tropical storm-force winds.',
                                         },
                                       ],
                                     },
                                     {
                                       copy: [
                                         {
-                                          text: "More than a week after it formed, Hurricane Sam became one of the longest-lasting Atlantic hurricanes on record.",
+                                          text: 'It lost power as it moved northeastward over colder water. The system’s cloud pattern eventually became asymmetric and Sam was downgraded to a post-tropical cyclone.',
+                                        },
+                                      ],
+                                    },
+                                    {
+                                      copy: [
+                                        {
+                                          text: 'More than a week after it formed, Hurricane Sam became one of the longest-lasting Atlantic hurricanes on record.',
                                         },
                                       ],
                                     },
@@ -4125,197 +4125,197 @@
                                 },
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "Only satellite images can give a true sense of the symmetry and stunning size of a mature tropical cyclone: a vortex of wind and moisture up to a thousand miles in diameter that bends with the curvature of the planet. A single storm can blot out the coastline between Maine and Florida and generate more than 200 times the energy that the world’s power plants create in a single day. (Or the power of 240 10-megaton nuclear bombs detonated every 20 minutes; take your pick.) Over millions of years, these storms have carved coastlines and ocean basins. They have wiped out entire ecosystems and redistributed others across oceans. They can even transport their own avian community of shearwaters, frigatebirds, petrels and songbirds that may fly above or become trapped in the relatively calm eye of the storm for many miles, only to be unceremoniously dumped on the shores of a distant place.",
+                                  'Only satellite images can give a true sense of the symmetry and stunning size of a mature tropical cyclone: a vortex of wind and moisture up to a thousand miles in diameter that bends with the curvature of the planet. A single storm can blot out the coastline between Maine and Florida and generate more than 200 times the energy that the world’s power plants create in a single day. (Or the power of 240 10-megaton nuclear bombs detonated every 20 minutes; take your pick.) Over millions of years, these storms have carved coastlines and ocean basins. They have wiped out entire ecosystems and redistributed others across oceans. They can even transport their own avian community of shearwaters, frigatebirds, petrels and songbirds that may fly above or become trapped in the relatively calm eye of the storm for many miles, only to be unceremoniously dumped on the shores of a distant place.',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "The Gulf Coast, with its warm, shallow water and troublesome Loop Current, has seen more than three dozen major hurricanes since 1851. But it is Florida that holds the distinction of being the most hurricane-prone state in the country. More than 100 tropical cyclones have made landfall there in the same time span, making locals who experienced some of those storms wonder if the current influx of newcomers to the Sunshine State will pack up and leave after their first hurricane season.",
+                                  'The Gulf Coast, with its warm, shallow water and troublesome Loop Current, has seen more than three dozen major hurricanes since 1851. But it is Florida that holds the distinction of being the most hurricane-prone state in the country. More than 100 tropical cyclones have made landfall there in the same time span, making locals who experienced some of those storms wonder if the current influx of newcomers to the Sunshine State will pack up and leave after their first hurricane season.',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "Greg Foltz of NOAA’s Atlantic Oceanographic and Meteorological Laboratory (A.O.M.L.) lives on relatively high ground among the neat, terra-cotta-capped bungalows of Coral Gables. He met me at a concrete picnic pavilion on Miami’s Virginia Key, a hundred yards from the Bauhausian A.O.M.L. campus. Foltz is a willowy 46 years old, soft-spoken, with a salty nerdiness that perhaps only an oceanographer can achieve. He grew up with the thrum of nor’easters, squalls and the occasional hurricane outside Boston before joining NOAA in 2010. He is now lead principal investigator of the Prediction and Research Moored Array in the Tropical Atlantic (PIRATA) Northeast Extension and its array of red-and-white research buoys, outfitted for oceanographic observation and hurricane forecasting.",
+                                  'Greg Foltz of NOAA’s Atlantic Oceanographic and Meteorological Laboratory (A.O.M.L.) lives on relatively high ground among the neat, terra-cotta-capped bungalows of Coral Gables. He met me at a concrete picnic pavilion on Miami’s Virginia Key, a hundred yards from the Bauhausian A.O.M.L. campus. Foltz is a willowy 46 years old, soft-spoken, with a salty nerdiness that perhaps only an oceanographer can achieve. He grew up with the thrum of nor’easters, squalls and the occasional hurricane outside Boston before joining NOAA in 2010. He is now lead principal investigator of the Prediction and Research Moored Array in the Tropical Atlantic (PIRATA) Northeast Extension and its array of red-and-white research buoys, outfitted for oceanographic observation and hurricane forecasting.',
                               },
-                              { type: "ad", value: { id: 2 } },
+                              { type: 'ad', value: { id: 2 } },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "One of Foltz’s duties is finding new tech to expand and improve the observation system. After colleagues at his former lab, NOAA’s Pacific Marine Environmental Laboratory (P.M.E.L.) in Seattle, told him about Saildrones, he set up a meeting to discuss building a drone that could record the inner workings of a hurricane. Jenkins had been collaborating with NOAA for four years, fine-tuning instruments and redesigning the hull and sail plan. Foltz wrote a grant and secured SD 1045 and four other drones for the 2021 hurricane season. The morning of Sept. 30, he watched from a makeshift home office as SD 1045 sailed into Hurricane Sam.",
+                                  'One of Foltz’s duties is finding new tech to expand and improve the observation system. After colleagues at his former lab, NOAA’s Pacific Marine Environmental Laboratory (P.M.E.L.) in Seattle, told him about Saildrones, he set up a meeting to discuss building a drone that could record the inner workings of a hurricane. Jenkins had been collaborating with NOAA for four years, fine-tuning instruments and redesigning the hull and sail plan. Foltz wrote a grant and secured SD 1045 and four other drones for the 2021 hurricane season. The morning of Sept. 30, he watched from a makeshift home office as SD 1045 sailed into Hurricane Sam.',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
                                   'Amid a flurry of congratulatory text messages that morning, Foltz homed in on an anomaly in the drone’s data stream. Sam had undergone rapid intensification, during which a storm’s maximum winds increase 35 m.p.h. or more in 24 hours. The phenomenon, which is difficult to forecast and often occurs just before landfall, has become a priority for U.S. weather agencies, as it often leaves coastal residents expecting a mild storm only to be walloped by a Category 3 or 4 hurricane. Rapid intensification used to spin up once a century, but studies show that in the future, it could occur more frequently — especially in waters bordering the East Coast. In 2020 alone, \u003Ca href="https:\u002F\u002Fwww.ncei.noaa.gov\u002Fnews\u002F2020-north-atlantic-hurricane-season-shatters-records"\u003E10 Atlantic hurricanes underwent rapid intensification\u003C\u002Fa\u003E. The next year, Hurricane Ida’s winds jumped to 150 m.p.h. from 85 just before making landfall in New Orleans and Alabama, ominously on the 16th anniversary of Hurricane Katrina.',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "The readings Foltz noticed indicated that surface temperatures beneath Sam were higher than normal. Typically, evaporation and ocean mixing beneath a hurricane cools surface water near the eye. But SD 1045 indicated that the surface was not cooling. It was warming up, creating a storm with no bridle.",
+                                  'The readings Foltz noticed indicated that surface temperatures beneath Sam were higher than normal. Typically, evaporation and ocean mixing beneath a hurricane cools surface water near the eye. But SD 1045 indicated that the surface was not cooling. It was warming up, creating a storm with no bridle.',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "The readings were so off that Foltz assumed a gauge had broken. He checked SD 1045’s wind-speed figures against a nearby research buoy and saw similar numbers. He also noticed low salinity in the water and confirmed those readings with satellite data. Weeks later, after poring over the data, Foltz and his colleagues concluded that a pool of fresh water — which is less dense than salt water and floats on top of it — had likely blocked upwelling currents from cooling the surface.",
+                                  'The readings were so off that Foltz assumed a gauge had broken. He checked SD 1045’s wind-speed figures against a nearby research buoy and saw similar numbers. He also noticed low salinity in the water and confirmed those readings with satellite data. Weeks later, after poring over the data, Foltz and his colleagues concluded that a pool of fresh water — which is less dense than salt water and floats on top of it — had likely blocked upwelling currents from cooling the surface.',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "The discovery provided further evidence in an area that had confounded meteorologists for decades. Two months after Hurricane Sam veered northeast and sputtered out southeast of Greenland, NOAA sent out a news release titled “Measuring Salt in the Ocean May Be Key to Predicting Hurricane Intensity.” The release outlined how the outflow of the Amazon, Orinoco and Mississippi Rivers could potentially obstruct upwelling and ocean mixing beneath storms. Further study the next spring illustrated how increased rainfall in today’s supersaturated storms could also dump enough freshwater to reduce upwelling and ocean cooling, making intensification more likely.",
+                                  'The discovery provided further evidence in an area that had confounded meteorologists for decades. Two months after Hurricane Sam veered northeast and sputtered out southeast of Greenland, NOAA sent out a news release titled “Measuring Salt in the Ocean May Be Key to Predicting Hurricane Intensity.” The release outlined how the outflow of the Amazon, Orinoco and Mississippi Rivers could potentially obstruct upwelling and ocean mixing beneath storms. Further study the next spring illustrated how increased rainfall in today’s supersaturated storms could also dump enough freshwater to reduce upwelling and ocean cooling, making intensification more likely.',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "Foltz took a summary of his findings to the National Hurricane Center. “Now they’re starting to appreciate that salinity can affect hurricane intensity,” he says.",
+                                  'Foltz took a summary of his findings to the National Hurricane Center. “Now they’re starting to appreciate that salinity can affect hurricane intensity,” he says.',
                               },
-                              { type: "ad", value: { id: 3 } },
+                              { type: 'ad', value: { id: 3 } },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "\u003Cstrong\u003EA month after\u003C\u002Fstrong\u003E SD 1045 safely sailed back to port, a disturbance in the Pacific Ocean developed into a tropical depression. The storm was named Rai, and two days later it became a Category 1 typhoon. As the storm bore down on the volcanic ridgelines and montane rainforests hemming the Philippines, rapid intensification took it from the equivalent of a Category 1 Atlantic hurricane to a supertyphoon, equivalent to a Category 5 hurricane, with maximum sustained winds of 160 m.p.h.",
-                              },
-                              {
-                                type: "text",
-                                value:
-                                  "In 48 hours, Rai decimated thousands of villages, killed more than 400 people, drove seven million from their homes and inflicted hundreds of millions of dollars in damage — including postponing a mass coronavirus vaccination effort. Rai was not the first storm to hit the Philippines in 2021. Fourteen other gales overran the islands earlier that year, sometimes just weeks apart. And four months later, Tropical Storm Megi killed more than 150, wiped out several villages with landslides and displaced more than a million people.",
+                                  '\u003Cstrong\u003EA month after\u003C\u002Fstrong\u003E SD 1045 safely sailed back to port, a disturbance in the Pacific Ocean developed into a tropical depression. The storm was named Rai, and two days later it became a Category 1 typhoon. As the storm bore down on the volcanic ridgelines and montane rainforests hemming the Philippines, rapid intensification took it from the equivalent of a Category 1 Atlantic hurricane to a supertyphoon, equivalent to a Category 5 hurricane, with maximum sustained winds of 160 m.p.h.',
                               },
                               {
-                                type: "text",
+                                type: 'text',
+                                value:
+                                  'In 48 hours, Rai decimated thousands of villages, killed more than 400 people, drove seven million from their homes and inflicted hundreds of millions of dollars in damage — including postponing a mass coronavirus vaccination effort. Rai was not the first storm to hit the Philippines in 2021. Fourteen other gales overran the islands earlier that year, sometimes just weeks apart. And four months later, Tropical Storm Megi killed more than 150, wiped out several villages with landslides and displaced more than a million people.',
+                              },
+                              {
+                                type: 'text',
                                 value:
                                   'With their billions in damages and clever National Hurricane Center tweets — “Kate Still a Poorly Organized Depression” — Atlantic hurricanes represent just 16 percent of all annual tropical cyclones. Hurricane basins in the Pacific that border Australia, Indonesia, Fiji, Japan and the Philippines get 60 percent of the storms, while \u003Ca href="https:\u002F\u002Fwww.nytimes.com\u002F2022\u002F06\u002F29\u002Fclimate\u002Fhurricanes-typhoons-cyclones.html"\u003E24 percent roam the Indian Ocean and the South Pacific\u003C\u002Fa\u003E. Called typhoons when they originate in the Northwest Pacific and cyclones in the South Pacific and Indian Ocean, the storms are identical in all but name to hurricanes. They are also growing stronger as the ocean warms beneath them.',
                               },
                               {
-                                type: "illoseq",
+                                type: 'illoseq',
                                 value: {
-                                  className: "seq4",
+                                  className: 'seq4',
                                   items: [
                                     {
-                                      src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq4-bkg-mobile.jpg",
-                                      "src-desktop":
-                                        "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq4-bkg.jpg",
-                                      className: "seq4-bkg parallax",
+                                      src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq4-bkg-mobile.jpg',
+                                      'src-desktop':
+                                        'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq4-bkg.jpg',
+                                      className: 'seq4-bkg parallax',
                                     },
                                     {
-                                      src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq4-helicopter-mobile.png",
-                                      "src-desktop":
-                                        "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq4-helicopter.png",
-                                      className: "seq4-helicopter parallax",
+                                      src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq4-helicopter-mobile.png',
+                                      'src-desktop':
+                                        'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq4-helicopter.png',
+                                      className: 'seq4-helicopter parallax',
                                     },
                                     {
-                                      src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq4-mid-mobile.png",
-                                      "src-desktop":
-                                        "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq4-mid.png",
-                                      className: "seq4-mid parallax",
+                                      src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq4-mid-mobile.png',
+                                      'src-desktop':
+                                        'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq4-mid.png',
+                                      className: 'seq4-mid parallax',
                                     },
                                     {
-                                      src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq4-fg-mobile.png",
-                                      "src-desktop":
-                                        "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq4-fg.png",
-                                      className: "seq4-fg parallax",
+                                      src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq4-fg-mobile.png',
+                                      'src-desktop':
+                                        'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fseq4-fg.png',
+                                      className: 'seq4-fg parallax',
                                     },
                                   ],
                                   copy: [
                                     {
-                                      text: "It should be well known by now that developing nations least responsible for creating the climate crises are suffering disproportionally from its geophysical fallout.",
+                                      text: 'It should be well known by now that developing nations least responsible for creating the climate crises are suffering disproportionally from its geophysical fallout.',
                                     },
                                   ],
                                 },
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
                                   'Nowhere is this incongruity more evident than in weather- and climate-related natural disasters — which \u003Ca href="https:\u002F\u002Fpublic.wmo.int\u002Fen\u002Fmedia\u002Fpress-release\u002Fweather-related-disasters-increase-over-past-50-years-causing-more-damage-fewer"\u003Eincreased fivefold globally from 1970 to 2019\u003C\u002Fa\u003E, with 91 percent of associated deaths occurring in the developing world. The proportion of Category 4 and 5 typhoons making landfall in East and Southeast Asia appears to have increased, with storms lasting longer, penetrating farther inland and causing vastly more damage. \u003Ca href="https:\u002F\u002Fwww.theguardian.com\u002Fenvironment\u002F2016\u002Fsep\u002F05\u002Fasian-typhoons-becoming-more-intense-study-finds"\u003EA 2016 study\u003C\u002Fa\u003E found that the average intensity of all typhoons in the region had grown by 12 to 15 percent from 1977 to 2014. Typhoon Koppu in 2015 dumped 35 inches of rain on the Philippines, and Cyclone Freddy in February became the longest, most powerful tropical cyclone in any ocean basin in history after destroying large swaths of Madagascar and Mozambique. There is no longer respite from typhoon season in the western North Pacific, either. Storm season now essentially lasts \u003Ca href="https:\u002F\u002Fwww.doncio.navy.mil\u002Fchips\u002FArticleDetails.aspx?ID=7444"\u003Eall year\u003C\u002Fa\u003E.',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "Damage and loss of life on the low-lying, densely populated coastlines of Asia and Africa — typically with little to no resiliency or early-warning systems — is beyond compare. Some of the most infamous storms in history made landfall there: the 1970 Bhola cyclone, which pushed a 33-foot-tall storm surge across the Ganges Delta in what is now Bangladesh, with an estimated death toll as high as 500,000; Typhoon Nina in 1975 and a resulting dam failure, which took more than 150,000 lives in China’s Henan Province; and Myanmar’s Cyclone Nargis in 2008, with more than 100,000 dead or missing after a 13-foot storm surge swept across the Irrawaddy Delta.",
+                                  'Damage and loss of life on the low-lying, densely populated coastlines of Asia and Africa — typically with little to no resiliency or early-warning systems — is beyond compare. Some of the most infamous storms in history made landfall there: the 1970 Bhola cyclone, which pushed a 33-foot-tall storm surge across the Ganges Delta in what is now Bangladesh, with an estimated death toll as high as 500,000; Typhoon Nina in 1975 and a resulting dam failure, which took more than 150,000 lives in China’s Henan Province; and Myanmar’s Cyclone Nargis in 2008, with more than 100,000 dead or missing after a 13-foot storm surge swept across the Irrawaddy Delta.',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "Lack of data and accurate forecasting is largely to blame for the high casualty rate. Much of the region still uses weather balloons to gauge atmospheric conditions, and a lack of reliable electricity makes automated weather stations and data transmission difficult. About one-third of the world’s population has no access to extreme-weather early-warning systems — including a stunning 60 percent of people in Africa. A 2019 report by the Global Commission on Adaptation addressed the shortfall, outlining how an $800 million investment in forecasting could avoid up to $16 billion in weather-related damage. The United Nations took up the challenge in 2021 at its climate conference, COP26, in Glasgow. The next year it promised technology within five years that will deliver storm warnings to every region on the planet.",
+                                  'Lack of data and accurate forecasting is largely to blame for the high casualty rate. Much of the region still uses weather balloons to gauge atmospheric conditions, and a lack of reliable electricity makes automated weather stations and data transmission difficult. About one-third of the world’s population has no access to extreme-weather early-warning systems — including a stunning 60 percent of people in Africa. A 2019 report by the Global Commission on Adaptation addressed the shortfall, outlining how an $800 million investment in forecasting could avoid up to $16 billion in weather-related damage. The United Nations took up the challenge in 2021 at its climate conference, COP26, in Glasgow. The next year it promised technology within five years that will deliver storm warnings to every region on the planet.',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
                                   'One presentation at COP26 addressed the scarcity of ocean-data collection vital to understanding tropical cyclones and climate change in general — not just in the developing world but everywhere. More than 80 percent of the ocean has yet to be mapped in high definition, and hardly any of it is being empirically monitored and measured \u003Ca href="https:\u002F\u002Foceanservice.noaa.gov\u002Ffacts\u002Fexploration.html"\u003Eregularly\u003C\u002Fa\u003E. Oceanographers often point out that appropriations for NASA’s deep-space exploration outpaces ocean exploration by more than 150 to 1 — to the point that scientists know more about the surface of Mars than they do about our own seas, which play an outsize role in the climate crisis and are far more important to the survival of our species. Forecasters and climate modelers, who rely heavily on ocean data, may have to use estimated numbers in their calculations, opening the door to potential large-scale errors in the planet’s carbon budget and all-important global-warming estimates.',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "The presenter, the NOAA oceanographer Adrienne Sutton, argued that this “black hole of data” is hampering our understanding of how the ocean is changing and how those changes affect food webs, carbon sequestration, weather and storms. To date, the world’s oceans have taken in around 90 percent of the heat trapped by greenhouse gases and more than 30 percent of carbon dioxide emitted by human activity. This role as buffer, which has most likely saved humanity from certain and swift extinction, has come with consequences, including sea-level rise, ocean acidification, coral die-offs, shifting global circulation currents and a rise in intense tropical cyclones.",
+                                  'The presenter, the NOAA oceanographer Adrienne Sutton, argued that this “black hole of data” is hampering our understanding of how the ocean is changing and how those changes affect food webs, carbon sequestration, weather and storms. To date, the world’s oceans have taken in around 90 percent of the heat trapped by greenhouse gases and more than 30 percent of carbon dioxide emitted by human activity. This role as buffer, which has most likely saved humanity from certain and swift extinction, has come with consequences, including sea-level rise, ocean acidification, coral die-offs, shifting global circulation currents and a rise in intense tropical cyclones.',
                               },
                               {
-                                type: "scrollseq",
+                                type: 'scrollseq',
                                 value: {
-                                  className: "antarctica",
+                                  className: 'antarctica',
                                   layers: [
                                     {
-                                      type: "graphic",
+                                      type: 'graphic',
                                       items: [
                                         {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fantarctica-000.svg",
-                                          "src-desktop": "",
-                                          type: "svg",
-                                          className: "antarctica0",
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fantarctica-000.svg',
+                                          'src-desktop': '',
+                                          type: 'svg',
+                                          className: 'antarctica0',
                                         },
                                       ],
                                     },
                                     {
-                                      type: "graphic",
+                                      type: 'graphic',
                                       items: [
                                         {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fantarctica-001.svg",
-                                          "src-desktop": "",
-                                          type: "svg",
-                                          className: "antarctica1",
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fantarctica-001.svg',
+                                          'src-desktop': '',
+                                          type: 'svg',
+                                          className: 'antarctica1',
                                         },
                                       ],
                                     },
                                     {
-                                      type: "graphic",
+                                      type: 'graphic',
                                       items: [
                                         {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fantarctica-002.svg",
-                                          "src-desktop": "",
-                                          type: "svg",
-                                          className: "antarctica2",
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fantarctica-002.svg',
+                                          'src-desktop': '',
+                                          type: 'svg',
+                                          className: 'antarctica2',
                                         },
                                       ],
                                     },
                                     {
-                                      type: "graphic",
+                                      type: 'graphic',
                                       items: [
                                         {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fantarctica-003.svg",
-                                          "src-desktop": "",
-                                          type: "svg",
-                                          className: "antarctica3",
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fantarctica-003.svg',
+                                          'src-desktop': '',
+                                          type: 'svg',
+                                          className: 'antarctica3',
                                         },
                                       ],
                                     },
                                     {
-                                      type: "graphic",
+                                      type: 'graphic',
                                       items: [
                                         {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fantarctica-004.svg",
-                                          "src-desktop": "",
-                                          type: "svg",
-                                          className: "antarctica4",
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fantarctica-004.svg',
+                                          'src-desktop': '',
+                                          type: 'svg',
+                                          className: 'antarctica4',
                                         },
                                       ],
                                     },
                                     {
-                                      type: "graphic",
+                                      type: 'graphic',
                                       items: [
                                         {
-                                          src: "https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fantarctica-006.svg",
-                                          "src-desktop": "",
-                                          type: "svg",
-                                          className: "antarctica6",
+                                          src: 'https://static01.nytimes.com/newsgraphics/2023-04-13-mag-superstorms-at-sea/ea145896d9a05ee16854fc9cefc793839417a1bf/_assets\u002Fantarctica-006.svg',
+                                          'src-desktop': '',
+                                          type: 'svg',
+                                          className: 'antarctica6',
                                         },
                                       ],
                                     },
@@ -4324,7 +4324,7 @@
                                     {
                                       copy: [
                                         {
-                                          text: "The focus of Sutton’s presentation was the Southern Ocean, which encircles Antarctica and is one of the least-studied bodies of water on Earth.",
+                                          text: 'The focus of Sutton’s presentation was the Southern Ocean, which encircles Antarctica and is one of the least-studied bodies of water on Earth.',
                                         },
                                       ],
                                     },
@@ -4338,28 +4338,28 @@
                                     {
                                       copy: [
                                         {
-                                          text: "In early 2019, Saildrone launched SD 1020, outfitted with a CO2 sensor from Sutton’s team, and made what is believed to be the first unmanned circumnavigation of Antarctica.",
+                                          text: 'In early 2019, Saildrone launched SD 1020, outfitted with a CO2 sensor from Sutton’s team, and made what is believed to be the first unmanned circumnavigation of Antarctica.',
                                         },
                                       ],
                                     },
                                     {
                                       copy: [
                                         {
-                                          text: "The drone completed the 13,670-mile journey in 196 days, enduring 50-foot waves, 80-m.p.h. winds, freezing temperatures and even a collision with an iceberg.",
+                                          text: 'The drone completed the 13,670-mile journey in 196 days, enduring 50-foot waves, 80-m.p.h. winds, freezing temperatures and even a collision with an iceberg.',
                                         },
                                       ],
                                     },
                                     {
                                       copy: [
                                         {
-                                          text: "Over the following few months, more than 4,700 CO2 measurements confirmed what scientists suspected — parts of the Southern Ocean were not absorbing CO2 year-round.",
+                                          text: 'Over the following few months, more than 4,700 CO2 measurements confirmed what scientists suspected — parts of the Southern Ocean were not absorbing CO2 year-round.',
                                         },
                                       ],
                                     },
                                     {
                                       copy: [
                                         {
-                                          text: "They were outgassing it in the winter.",
+                                          text: 'They were outgassing it in the winter.',
                                         },
                                       ],
                                     },
@@ -4367,79 +4367,79 @@
                                 },
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "“During the winter, the Southern Ocean was a carbon source — which threw the entire carbon budget into disarray,” Richard Jenkins says. “Where is that 30 percent of carbon emissions going? No one has an answer for that, which is a phenomenally poor understanding of our planetary systems. Our goal is to get enough data to get the models to reduce the margin of error so that everyone can agree on our trajectory.”",
+                                  '“During the winter, the Southern Ocean was a carbon source — which threw the entire carbon budget into disarray,” Richard Jenkins says. “Where is that 30 percent of carbon emissions going? No one has an answer for that, which is a phenomenally poor understanding of our planetary systems. Our goal is to get enough data to get the models to reduce the margin of error so that everyone can agree on our trajectory.”',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "\u003Cstrong\u003EAs another \u003C\u002Fstrong\u003Ehurricane season approaches, much of the U.S. coast remains unprepared. Flood insurance for millions of Americans living near the ocean is still optional. Some federal disaster loans to rebuild after a storm are contingent on credit; consumer-protection laws do not rein in corrupt contractors who flock to disaster areas; and many state governments lack the funds and staffing necessary to manage recovery.",
+                                  '\u003Cstrong\u003EAs another \u003C\u002Fstrong\u003Ehurricane season approaches, much of the U.S. coast remains unprepared. Flood insurance for millions of Americans living near the ocean is still optional. Some federal disaster loans to rebuild after a storm are contingent on credit; consumer-protection laws do not rein in corrupt contractors who flock to disaster areas; and many state governments lack the funds and staffing necessary to manage recovery.',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
                                   'Eighteen years after Hurricane Katrina rolled over the clapboard shacks and corner stores of \u003Ca href="https:\u002F\u002Fwww.datacenterresearch.org\u002Fdata-resources\u002Fneighborhood-data\u002Fdistrict-8\u002Flower-ninth-ward\u002F?itid=lk_inline_enhanced-template"\u003ENew Orleans’s Lower Ninth Ward,\u003C\u002Fa\u003E the population is still around 30 percent of what it was in 2000 — with only a handful of businesses to serve residents. Communities in the nine states that experienced Hurricane Ida’s torrential wind and rain in 2021 are still rebuilding, and parts of Long Island, Staten Island and New Jersey are still recovering from Superstorm Sandy 11 years later — all while New York City repeatedly delayed and rewrote its plans to fortify and protect Lower Manhattan from another direct hit.',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
                                   'On the streets of Fort Myers, Fla., where Hurricane Ian, a Category 4 storm, killed more than 150 people and caused an estimated \u003Ca href="https:\u002F\u002Fwww.nhc.noaa.gov\u002Fdata\u002Ftcr\u002FAL092022_Ian.pdf"\u003E$112.9 billion in damages in September\u003C\u002Fa\u003E, many residents remain displaced, and even more are still waiting on insurance checks. Full recovery could take up to a decade, disaster experts say, assuming another storm does not hit before then.',
                               },
-                              { type: "ad", value: { id: 4 } },
+                              { type: 'ad', value: { id: 4 } },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "What worries tropical-cyclone modelers like Hiro Murakami, a project scientist at NOAA’s Geophysical Fluid Dynamics Laboratory in Princeton, N.J., are regions with little to no experience with major storms being drawn into tropical-cyclone territory. Warming water off the coast of Europe over the last 20 years has opened the door to storms like ex-Hurricane Ophelia in 2017, which grazed Ireland with gusts up to 119 m.p.h. The next year, Hurricane Helene followed a rare path, traveling north from Africa, instead of west, eventually affecting the United Kingdom. Other regions being drawn into cyclone territory include India’s west coast, eastern Japan, Hawaii and the sprawling agrarian-industrial coastline that wraps around northeastern China.",
+                                  'What worries tropical-cyclone modelers like Hiro Murakami, a project scientist at NOAA’s Geophysical Fluid Dynamics Laboratory in Princeton, N.J., are regions with little to no experience with major storms being drawn into tropical-cyclone territory. Warming water off the coast of Europe over the last 20 years has opened the door to storms like ex-Hurricane Ophelia in 2017, which grazed Ireland with gusts up to 119 m.p.h. The next year, Hurricane Helene followed a rare path, traveling north from Africa, instead of west, eventually affecting the United Kingdom. Other regions being drawn into cyclone territory include India’s west coast, eastern Japan, Hawaii and the sprawling agrarian-industrial coastline that wraps around northeastern China.',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "Storms are even hitting the Middle East with more power, Murakami says, like Cyclone Shaheen in 2021. The storm took a remarkable path from the Bay of Bengal across India and the Arabian Sea and made landfall in Oman as a severe cyclone, the first one there in recorded history. “They have no experience with it,” Murakami says. “No dikes. No defenses.”",
+                                  'Storms are even hitting the Middle East with more power, Murakami says, like Cyclone Shaheen in 2021. The storm took a remarkable path from the Bay of Bengal across India and the Arabian Sea and made landfall in Oman as a severe cyclone, the first one there in recorded history. “They have no experience with it,” Murakami says. “No dikes. No defenses.”',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "Another concern is the overall rise of extreme weather. Just look at 2022: Extreme rainstorms flooded the outskirts of Rio de Janeiro; low rainfall in Iraq resulted in a huge dust storm that shut down most of the country; heat waves in India and Pakistan brought temperatures topping 120 degrees Fahrenheit in some places, followed by exceptionally rainy monsoon seasons; and freak tornadoes tore through New Orleans. The opening months of 2023 had a parade of atmospheric rivers — made wetter and more intense by climate change — dump more than 30 trillion gallons of water on California.",
+                                  'Another concern is the overall rise of extreme weather. Just look at 2022: Extreme rainstorms flooded the outskirts of Rio de Janeiro; low rainfall in Iraq resulted in a huge dust storm that shut down most of the country; heat waves in India and Pakistan brought temperatures topping 120 degrees Fahrenheit in some places, followed by exceptionally rainy monsoon seasons; and freak tornadoes tore through New Orleans. The opening months of 2023 had a parade of atmospheric rivers — made wetter and more intense by climate change — dump more than 30 trillion gallons of water on California.',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
                                   'Gore-Tex-clad meteorologists clinging to seaside piers have popularized a vibrant vocabulary for our new meteorological reality: bombogenesis, polar vortex, vapor storm, wave overtopping, sting jets, megadroughts. It is a dangerous game relating all weather disasters to climate change, but when one considers the complex and interrelated nature of climate and weather systems on Earth, there’s no denying that they must be linked to some degree. Adding an estimated \u003Ca href="https:\u002F\u002Ftheconversation.com\u002Fearths-energy-budget-is-out-of-balance-heres-how-thats-warming-the-climate-165244"\u003E0.7 watts of heat to every square meter of land and water on the planet\u003C\u002Fa\u003E is influencing pretty much everything in the ocean and sky, even the poofy thunderheads that glide over your backyard on a summer afternoon.',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "Such are the perils of disturbing the equilibrium that Earth has maintained for millions of years, Murakami says. With average atmospheric CO2 content topping 417 parts per million for the first time in more than four million years, he points out another often overlooked and underreported fact: If we stopped burning fossil fuels today, additional warming would begin to flatten within a few years, as would the escalation of tropical-cyclone intensity.",
+                                  'Such are the perils of disturbing the equilibrium that Earth has maintained for millions of years, Murakami says. With average atmospheric CO2 content topping 417 parts per million for the first time in more than four million years, he points out another often overlooked and underreported fact: If we stopped burning fossil fuels today, additional warming would begin to flatten within a few years, as would the escalation of tropical-cyclone intensity.',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "“If we can successfully constrain emissions in the middle of the 21st century, and CO2 emissions decrease afterward, hurricane activity will also go back to present-day,” he says. “Cyclone activity largely follows the path of CO2 levels.”",
+                                  '“If we can successfully constrain emissions in the middle of the 21st century, and CO2 emissions decrease afterward, hurricane activity will also go back to present-day,” he says. “Cyclone activity largely follows the path of CO2 levels.”',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
                                   'Colorado State University released its \u003Ca href="https:\u002F\u002Ftropical.colostate.edu\u002Fforecasting.html"\u003Eannual hurricane outlook\u003C\u002Fa\u003E in April, anticipating 13 named storms, six hurricanes and two major hurricanes in 2023. Foltz and Saildrone were already preparing a new fleet of drones. The plan was to match them with aerial drones launched from Hurricane Hunter aircraft and subsea gliders so researchers could analyze the architecture of a storm from hundreds of feet beneath the ocean’s surface to thousands of feet above it.',
                               },
                               {
-                                type: "text",
+                                type: 'text',
                                 value:
-                                  "Foltz will watch their progress from his office in NOAA’s A.O.M.L. lab. It will most likely take each drone a month to navigate into position and then a few weeks to coordinate with the gliders and aerial drones. Then Foltz, Jenkins and a crew of NOAA scientists across the nation will wait patiently — watching the skies, monitoring the Atlantic’s ever-warming temperature and waiting for a line of thunderheads to be hooked and whirled into a perfect storm.",
+                                  'Foltz will watch their progress from his office in NOAA’s A.O.M.L. lab. It will most likely take each drone a month to navigate into position and then a few weeks to coordinate with the gliders and aerial drones. Then Foltz, Jenkins and a crew of NOAA scientists across the nation will wait patiently — watching the skies, monitoring the Atlantic’s ever-warming temperature and waiting for a line of thunderheads to be hooked and whirled into a perfect storm.',
                               },
                               {
-                                type: "credits",
+                                type: 'credits',
                                 value: {
                                   copy: [
                                     {
-                                      type: "text",
+                                      type: 'text',
                                       value:
-                                        "Porter Fox is a writer in New York and the author of a forthcoming book from Little, Brown and Company, “The Great River of the Sea,” which is based on reporting from this article.",
+                                        'Porter Fox is a writer in New York and the author of a forthcoming book from Little, Brown and Company, “The Great River of the Sea,” which is based on reporting from this article.',
                                     },
                                     {
-                                      type: "text",
+                                      type: 'text',
                                       value:
-                                        "Wesley Allsbrook is an illustrator known for bold movement, saturated palettes and a strong sense of narrative in their art.",
+                                        'Wesley Allsbrook is an illustrator known for bold movement, saturated palettes and a strong sense of narrative in their art.',
                                     },
                                   ],
                                 },
@@ -4453,9 +4453,9 @@
                       form: null,
                       error: null,
                       params: {},
-                      route: { id: "/(pages)/index" },
+                      route: { id: '/(pages)/index' },
                     },
-                  });
+                  })
                 </script>
               </div>
             </div>
@@ -4467,218 +4467,218 @@
       window.__preloadedData = {
         config: {
           gqlUrlClient:
-            "https:\u002F\u002Fsamizdat-graphql.nytimes.com\u002Fgraphql\u002Fv2",
+            'https:\u002F\u002Fsamizdat-graphql.nytimes.com\u002Fgraphql\u002Fv2',
           gqlRequestHeaders: {
-            "nyt-app-type": "project-vi",
-            "nyt-app-version": "0.0.5",
-            "nyt-token":
-              "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs+\u002FoUCTBmD\u002FcLdmcecrnBMHiU\u002FpxQCn2DDyaPKUOXxi4p0uUSZQzsuq1pJ1m5z1i0YGPd1U1OeGHAChWtqoxC7bFMCXcwnE1oyui9G1uobgpm1GdhtwkR7ta7akVTcsF8zxiXx7DNXIPd2nIJFH83rmkZueKrC4JVaNzjvD+Z03piLn5bHWU6+w+rA+kyJtGgZNTXKyPh6EC6o5N+rknNMG5+CdTq35p8f99WjFawSvYgP9V64kgckbTbtdJ6YhVP58TnuYgr12urtwnIqWP9KSJ1e5vmgf3tunMqWNm6+AnsqNj8mCLdCuc5cEB74CwUeQcP2HQQmbCddBy2y0mEwIDAQAB",
+            'nyt-app-type': 'project-vi',
+            'nyt-app-version': '0.0.5',
+            'nyt-token':
+              'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs+\u002FoUCTBmD\u002FcLdmcecrnBMHiU\u002FpxQCn2DDyaPKUOXxi4p0uUSZQzsuq1pJ1m5z1i0YGPd1U1OeGHAChWtqoxC7bFMCXcwnE1oyui9G1uobgpm1GdhtwkR7ta7akVTcsF8zxiXx7DNXIPd2nIJFH83rmkZueKrC4JVaNzjvD+Z03piLn5bHWU6+w+rA+kyJtGgZNTXKyPh6EC6o5N+rknNMG5+CdTq35p8f99WjFawSvYgP9V64kgckbTbtdJ6YhVP58TnuYgr12urtwnIqWP9KSJ1e5vmgf3tunMqWNm6+AnsqNj8mCLdCuc5cEB74CwUeQcP2HQQmbCddBy2y0mEwIDAQAB',
           },
           gqlFetchTimeout: 1500,
           disablePersistedQueries: false,
-          initialDeviceType: "desktop",
+          initialDeviceType: 'desktop',
           fastlyAbraConfig: {
-            ".ver": "12509.000",
-            DFP_DenserAds_0423: "1_Denser",
-            HOME_chartbeat: "0_Control",
-            INT_cwv_dfp_deferAds_1022: "1_Lazy",
-            MX_NewArchitecture_cookingLP: "1_variant",
-            MX_NewArchitecture_gamesLP: "0_Control",
+            '.ver': '12509.000',
+            DFP_DenserAds_0423: '1_Denser',
+            HOME_chartbeat: '0_Control',
+            INT_cwv_dfp_deferAds_1022: '1_Lazy',
+            MX_NewArchitecture_cookingLP: '1_variant',
+            MX_NewArchitecture_gamesLP: '0_Control',
           },
-          fastlyEntitlements: "",
+          fastlyEntitlements: '',
           internalPreviewConfig: { meter: undefined, swg: undefined },
           webviewEnvironment: { isInWebview: false },
-          serviceWorkerFile: "service-worker-test-1683658112481.js",
+          serviceWorkerFile: 'service-worker-test-1683658112481.js',
         },
         interactiveConfig: {
           interactive: {
-            __typename: "Interactive",
+            __typename: 'Interactive',
             displayProperties: {
-              fullBleedDisplayStyle: "",
-              __typename: "CreativeWorkDisplayProperties",
+              fullBleedDisplayStyle: '',
+              __typename: 'CreativeWorkDisplayProperties',
               displayForPromotionOnly: false,
               displayOverrides: [
-                "HIDE_TOP_AD",
-                "INCLUDE_TRANSPARENT_MASTHEAD_WITH_WHITE_ICONS",
+                'HIDE_TOP_AD',
+                'INCLUDE_TRANSPARENT_MASTHEAD_WITH_WHITE_ICONS',
               ],
               maxWidth: 1600,
               minWidth: 300,
-              template: "Standard",
-              displayStyle: "minimal",
-              theme: "standard",
+              template: 'Standard',
+              displayStyle: 'minimal',
+              theme: 'standard',
             },
             section: {
-              id: "U2VjdGlvbjpueXQ6Ly9zZWN0aW9uL2E5MTNkMWZiLTNjZGYtNTU2Yi05YTgxLWYwYjk5NmExYTIwMg==",
-              name: "magazine",
-              __typename: "Section",
-              displayName: "Magazine",
-              url: "https:\u002F\u002Fwww.nytimes.com\u002Fsection\u002Fmagazine",
-              taxonomyID: "E57A148E-0CB9-4C02-966D-28B119710151",
-              type: "section",
-              uri: "nyt:\u002F\u002Fsection\u002Fa913d1fb-3cdf-556b-9a81-f0b996a1a202",
+              id: 'U2VjdGlvbjpueXQ6Ly9zZWN0aW9uL2E5MTNkMWZiLTNjZGYtNTU2Yi05YTgxLWYwYjk5NmExYTIwMg==',
+              name: 'magazine',
+              __typename: 'Section',
+              displayName: 'Magazine',
+              url: 'https:\u002F\u002Fwww.nytimes.com\u002Fsection\u002Fmagazine',
+              taxonomyID: 'E57A148E-0CB9-4C02-966D-28B119710151',
+              type: 'section',
+              uri: 'nyt:\u002F\u002Fsection\u002Fa913d1fb-3cdf-556b-9a81-f0b996a1a202',
             },
             subsection: null,
-            tone: "NO_TONE_SET",
+            tone: 'NO_TONE_SET',
             collections: [
               {
-                id: "TGVnYWN5Q29sbGVjdGlvbjpueXQ6Ly9sZWdhY3ljb2xsZWN0aW9uL2U2ZGRhNzZhLTlmMjMtNWVmNy05MzZmLTFkMmNjNjlmZjVmMA==",
-                name: "The New York Times Magazine",
-                collectionType: "SECTION",
-                __typename: "LegacyCollection",
-                slug: "magazine",
-                url: "https:\u002F\u002Fwww.nytimes.com\u002Fsection\u002Fmagazine",
-                uri: "nyt:\u002F\u002Flegacycollection\u002Fe6dda76a-9f23-5ef7-936f-1d2cc69ff5f0",
-                tagline: "",
+                id: 'TGVnYWN5Q29sbGVjdGlvbjpueXQ6Ly9sZWdhY3ljb2xsZWN0aW9uL2U2ZGRhNzZhLTlmMjMtNWVmNy05MzZmLTFkMmNjNjlmZjVmMA==',
+                name: 'The New York Times Magazine',
+                collectionType: 'SECTION',
+                __typename: 'LegacyCollection',
+                slug: 'magazine',
+                url: 'https:\u002F\u002Fwww.nytimes.com\u002Fsection\u002Fmagazine',
+                uri: 'nyt:\u002F\u002Flegacycollection\u002Fe6dda76a-9f23-5ef7-936f-1d2cc69ff5f0',
+                tagline: '',
               },
             ],
-            url: "https:\u002F\u002Fwww.nytimes.com\u002Finteractive\u002F2023\u002F05\u002F09\u002Fmagazine\u002Fhurricane-saildrone.html",
-            sourceId: "100000008896584",
+            url: 'https:\u002F\u002Fwww.nytimes.com\u002Finteractive\u002F2023\u002F05\u002F09\u002Fmagazine\u002Fhurricane-saildrone.html',
+            sourceId: '100000008896584',
             dfpTaxonomyException: null,
             advertisingProperties: {
-              sensitivity: "SHOW_ADS",
-              __typename: "CreativeWorkAdvertisingProperties",
+              sensitivity: 'SHOW_ADS',
+              __typename: 'CreativeWorkAdvertisingProperties',
             },
             adTargetingParams: [
               {
-                key: "als_test",
-                value: "1683666058525",
-                __typename: "AdTargetingParam",
+                key: 'als_test',
+                value: '1683666058525',
+                __typename: 'AdTargetingParam',
               },
-              { key: "prop", value: "nyt", __typename: "AdTargetingParam" },
-              { key: "plat", value: "web", __typename: "AdTargetingParam" },
-              { key: "edn", value: "us", __typename: "AdTargetingParam" },
+              { key: 'prop', value: 'nyt', __typename: 'AdTargetingParam' },
+              { key: 'plat', value: 'web', __typename: 'AdTargetingParam' },
+              { key: 'edn', value: 'us', __typename: 'AdTargetingParam' },
               {
-                key: "brandsensitive",
-                value: "true",
-                __typename: "AdTargetingParam",
+                key: 'brandsensitive',
+                value: 'true',
+                __typename: 'AdTargetingParam',
               },
-              { key: "per", value: "", __typename: "AdTargetingParam" },
+              { key: 'per', value: '', __typename: 'AdTargetingParam' },
               {
-                key: "org",
-                value: "saildroneinc,nationaloceanicandatmospherica",
-                __typename: "AdTargetingParam",
+                key: 'org',
+                value: 'saildroneinc,nationaloceanicandatmospherica',
+                __typename: 'AdTargetingParam',
               },
-              { key: "geo", value: "", __typename: "AdTargetingParam" },
+              { key: 'geo', value: '', __typename: 'AdTargetingParam' },
               {
-                key: "des",
+                key: 'des',
                 value:
-                  "hurricanesandtropicalstorms,sailboatsandsailing,oceansandseas,coastalareas,typhoons,globalwarming",
-                __typename: "AdTargetingParam",
+                  'hurricanesandtropicalstorms,sailboatsandsailing,oceansandseas,coastalareas,typhoons,globalwarming',
+                __typename: 'AdTargetingParam',
               },
-              { key: "spon", value: "", __typename: "AdTargetingParam" },
+              { key: 'spon', value: '', __typename: 'AdTargetingParam' },
               {
-                key: "auth",
-                value: "porterfox",
-                __typename: "AdTargetingParam",
+                key: 'auth',
+                value: 'porterfox',
+                __typename: 'AdTargetingParam',
               },
-              { key: "col", value: "", __typename: "AdTargetingParam" },
+              { key: 'col', value: '', __typename: 'AdTargetingParam' },
               {
-                key: "coll",
-                value: "thenewyorktimesmagazine",
-                __typename: "AdTargetingParam",
+                key: 'coll',
+                value: 'thenewyorktimesmagazine',
+                __typename: 'AdTargetingParam',
               },
-              { key: "artlen", value: "short", __typename: "AdTargetingParam" },
+              { key: 'artlen', value: 'short', __typename: 'AdTargetingParam' },
               {
-                key: "ledemedsz",
-                value: "none",
-                __typename: "AdTargetingParam",
+                key: 'ledemedsz',
+                value: 'none',
+                __typename: 'AdTargetingParam',
               },
-              { key: "gui", value: "", __typename: "AdTargetingParam" },
+              { key: 'gui', value: '', __typename: 'AdTargetingParam' },
               {
-                key: "template",
-                value: "interactive",
-                __typename: "AdTargetingParam",
+                key: 'template',
+                value: 'interactive',
+                __typename: 'AdTargetingParam',
               },
-              { key: "typ", value: "int", __typename: "AdTargetingParam" },
+              { key: 'typ', value: 'int', __typename: 'AdTargetingParam' },
               {
-                key: "section",
-                value: "magazine",
-                __typename: "AdTargetingParam",
-              },
-              {
-                key: "si_section",
-                value: "magazine",
-                __typename: "AdTargetingParam",
+                key: 'section',
+                value: 'magazine',
+                __typename: 'AdTargetingParam',
               },
               {
-                key: "id",
-                value: "100000008896584",
-                __typename: "AdTargetingParam",
-              },
-              { key: "trend", value: "", __typename: "AdTargetingParam" },
-              {
-                key: "pt",
-                value: "nt17,nt18,nt19,nt20,nt4,nt5,nt7,nt8,pt1,pt13,pt2",
-                __typename: "AdTargetingParam",
+                key: 'si_section',
+                value: 'magazine',
+                __typename: 'AdTargetingParam',
               },
               {
-                key: "gscat",
+                key: 'id',
+                value: '100000008896584',
+                __typename: 'AdTargetingParam',
+              },
+              { key: 'trend', value: '', __typename: 'AdTargetingParam' },
+              {
+                key: 'pt',
+                value: 'nt17,nt18,nt19,nt20,nt4,nt5,nt7,nt8,pt1,pt13,pt2',
+                __typename: 'AdTargetingParam',
+              },
+              {
+                key: 'gscat',
                 value:
-                  "neg_ibmtest,neg_capitalone,neg_citi_aa,neg_chanel,neg_ibm,neg_chan2,neg_mastercard,gb_safe,gs_science,neg_kaypemg,neg_bp,neg_google,neg_debeer,neg_bofa,neg_hms,neg_gg1,neg_rmw,neg_enerca,neg_fcli,neg_amex,neg_weather,neg_aramco,gs_science_environ,gs_science_misc,gs_business,gs_entertain,gv_death_injury,gs_t",
-                __typename: "AdTargetingParam",
+                  'neg_ibmtest,neg_capitalone,neg_citi_aa,neg_chanel,neg_ibm,neg_chan2,neg_mastercard,gb_safe,gs_science,neg_kaypemg,neg_bp,neg_google,neg_debeer,neg_bofa,neg_hms,neg_gg1,neg_rmw,neg_enerca,neg_fcli,neg_amex,neg_weather,neg_aramco,gs_science_environ,gs_science_misc,gs_business,gs_entertain,gv_death_injury,gs_t',
+                __typename: 'AdTargetingParam',
               },
-              { key: "is_viral", value: "low", __typename: "AdTargetingParam" },
-              { key: "tt", value: "", __typename: "AdTargetingParam" },
+              { key: 'is_viral', value: 'low', __typename: 'AdTargetingParam' },
+              { key: 'tt', value: '', __typename: 'AdTargetingParam' },
               {
-                key: "mt",
-                value: "MT1,MT5,MT7",
-                __typename: "AdTargetingParam",
+                key: 'mt',
+                value: 'MT1,MT5,MT7',
+                __typename: 'AdTargetingParam',
               },
             ],
             headline: {
               default:
-                "Hurricanes of Data: The Tiny Craft Mapping Superstorms at Sea",
-              seo: "The Hurricane and the Saildrone",
-              __typename: "CreativeWorkHeadline",
+                'Hurricanes of Data: The Tiny Craft Mapping Superstorms at Sea',
+              seo: 'The Hurricane and the Saildrone',
+              __typename: 'CreativeWorkHeadline',
             },
             summary:
-              "Understanding the secrets of a warming ocean means steering straight into the biggest hurricanes. Enter the saildrone.",
-            shortUrl: "https:\u002F\u002Fnyti.ms\u002F3VMPfCy",
+              'Understanding the secrets of a warming ocean means steering straight into the biggest hurricanes. Enter the saildrone.',
+            shortUrl: 'https:\u002F\u002Fnyti.ms\u002F3VMPfCy',
             commentStatus: undefined,
             commentProperties: {
-              status: "ACCEPT_AND_DISPLAY_COMMENTS",
-              __typename: "CreativeWorkCommentProperties",
-              prompt: "",
+              status: 'ACCEPT_AND_DISPLAY_COMMENTS',
+              __typename: 'CreativeWorkCommentProperties',
+              prompt: '',
               approvedCommentsCount: 0,
             },
-            uri: "nyt:\u002F\u002Finteractive\u002Fd9c13dc7-fe19-551e-96b2-d14dfb53d0dc",
+            uri: 'nyt:\u002F\u002Finteractive\u002Fd9c13dc7-fe19-551e-96b2-d14dfb53d0dc',
             associatedAssets: [
               {
                 region: null,
-                assetName: "email-signup-climate-fwd",
-                ruleName: "maps-climate",
-                testName: "",
-                parentTest: "",
+                assetName: 'email-signup-climate-fwd',
+                ruleName: 'maps-climate',
+                testName: '',
+                parentTest: '',
                 asset: {
-                  __typename: "Capsule",
-                  uri: "nyt:\u002F\u002Fcapsule\u002F897f233d-3780-534a-bae7-684998acb159",
+                  __typename: 'Capsule',
+                  uri: 'nyt:\u002F\u002Fcapsule\u002F897f233d-3780-534a-bae7-684998acb159',
                 },
-                __typename: "AssociatedInteractiveAssetBlock",
+                __typename: 'AssociatedInteractiveAssetBlock',
               },
             ],
             storylines: [
               {
-                testName: "",
-                ruleName: "styln-weather-general",
+                testName: '',
+                ruleName: 'styln-weather-general',
                 storyline: {
-                  uri: "nyt:\u002F\u002Fstoryline\u002Fb4f1eb75-c601-4d59-833d-7adfeb983227",
-                  url: "https:\u002F\u002Fwww.nytimes.com\u002Fstoryline\u002Fb4f1eb75-c601-4d59-833d-7adfeb983227",
-                  tone: "NEWS",
-                  displayName: "Weather",
+                  uri: 'nyt:\u002F\u002Fstoryline\u002Fb4f1eb75-c601-4d59-833d-7adfeb983227',
+                  url: 'https:\u002F\u002Fwww.nytimes.com\u002Fstoryline\u002Fb4f1eb75-c601-4d59-833d-7adfeb983227',
+                  tone: 'NEWS',
+                  displayName: 'Weather',
                   hubAssets: [],
                   primaryAssets: [],
-                  __typename: "Storyline",
+                  __typename: 'Storyline',
                   experimentalJsonBlob:
                     '{"data":[{"version":1,"type":"experimentalJsonBlob","data":[{"version":1,"type":"guide","data":{"title":"Explore Our Weather Coverage","leadIn":"","sections":[{"section":[{"type":"text","value":"\u003Cstrong\u003ELatest News\u003C\u002Fstrong\u003E"},{"type":"bulletedList","value":["Devastating floods and landslides caused by heavy rains hit the \u003Ca href=\\"https:\u002F\u002Fwww.nytimes.com\u002F2023\u002F05\u002F08\u002Fworld\u002Fafrica\u002Fcongo-flooding.html\\"\u003EDemocratic Republic of Congo\u003C\u002Fa\u003E and \u003Ca href=\\"https:\u002F\u002Fwww.nytimes.com\u002F2023\u002F05\u002F03\u002Fworld\u002Fafrica\u002Frwanda-floods-death-count.html\\"\u003ERwanda\u003C\u002Fa\u003E, killing hundreds of people and leaving many more homeless and in desperate need of assistance.","The early-season heat wave that broiled parts of Algeria, Morocco, Portugal and Spain in April almost certainly would not have occurred without climate change, \u003Ca href=\\"https:\u002F\u002Fwww.nytimes.com\u002F2023\u002F05\u002F05\u002Fclimate\u002Fheat-wave-spain-morocco.html\\"\u003Ea team of scientists said\u003C\u002Fa\u003E.","Forecasters from the World Meteorological Organization are reporting increased chances that El Niño, the global climate pattern often tied to intense heat, \u003Ca href=\\"https:\u002F\u002Fwww.nytimes.com\u002F2023\u002F05\u002F03\u002Fclimate\u002Fel-nino-extreme-weather-2024.html\\"\u003Ewill arrive by the end of summer\u003C\u002Fa\u003E."]}]},{"section":[{"type":"text","value":"\u003Cstrong\u003EHelpful Things to Know\u003C\u002Fstrong\u003E"},{"type":"bulletedList","value":["\u003Cstrong\u003ETornado Alerts: \u003C\u002Fstrong\u003EA tornado warning demands instant action. Here’s what to do \u003Ca href=\\"https:\u002F\u002Fwww.nytimes.com\u002Farticle\u002Ftornado-safety-tips.html\\"\u003Eif one comes your way\u003C\u002Fa\u003E.","\u003Cstrong\u003EClimate Change Effects: \u003C\u002Fstrong\u003EScientists have been able to draw links between a warming planet and hurricanes, heat waves and droughts. It has been \u003Ca href=\\"https:\u002F\u002Fwww.nytimes.com\u002Farticle\u002Ftornado-climate-change.html\\"\u003Eharder to establish the same connection with tornadoes\u003C\u002Fa\u003E.","\u003Cstrong\u003EFlood Safety: \u003C\u002Fstrong\u003EFast rising water \u003Ca href=\\"https:\u002F\u002Fwww.nytimes.com\u002Farticle\u002Fflash-flood-safety-survival.html\\"\u003Ecan be deadly\u003C\u002Fa\u003E. Here’s what to do if you’re caught off guard, and how to prepare for a future flooding event.","\u003Cstrong\u003EOn the Road:\u003C\u002Fstrong\u003E Safety experts \u003Ca href=\\"https:\u002F\u002Fwww.nytimes.com\u002Farticle\u002Fsnowstorm-car-safety-tips.html\\"\u003Eshared some advice\u003C\u002Fa\u003E on how snow-stranded drivers caught in a snowstorm can keep warm and collected. Their top tip? Be prepared.","\u003Cstrong\u003EPreparing Financially: \u003C\u002Fstrong\u003EWith the cost and frequency of weather-driven disasters on the rise, girding your finances for a catastrophe \u003Ca href=\\"https:\u002F\u002Fwww.nytimes.com\u002F2022\u002F08\u002F23\u002Fbusiness\u002Fstorm-weather-home-insurance.html\\"\u003Eis more crucial than ever\u003C\u002Fa\u003E.","\u003Cstrong\u003EEvacuating Pets: \u003C\u002Fstrong\u003EWhen disaster strikes, household pets’ lives are among the most vulnerable. \u003Ca href=\\"https:\u002F\u002Fwww.nytimes.com\u002F2022\u002F09\u002F28\u002Fus\u002Fpets-evacuation-help.html\\"\u003EYou can avoid the worst by planning ahead\u003C\u002Fa\u003E."]}]}]}}]}]}',
                 },
-                __typename: "AssociatedStoryline",
+                __typename: 'AssociatedStoryline',
               },
             ],
           },
         },
         statusCode: 200,
         externalAssets: undefined,
-      };
+      }
     </script>
 
     <script>
@@ -4693,83 +4693,82 @@
               Object.prototype.hasOwnProperty.call(o, a) &&
                 o[a] &&
                 s.push(o[a][0]),
-              (o[a] = 0);
+              (o[a] = 0)
           for (n in l)
-            Object.prototype.hasOwnProperty.call(l, n) && (e[n] = l[n]);
-          for (p && p(t); s.length; ) s.shift()();
-          return u.push.apply(u, f || []), r();
+            Object.prototype.hasOwnProperty.call(l, n) && (e[n] = l[n])
+          for (p && p(t); s.length; ) s.shift()()
+          return u.push.apply(u, f || []), r()
         }
         function r() {
           for (var e, t = 0; t < u.length; t++) {
             for (var r = u[t], n = !0, i = 1; i < r.length; i++) {
-              var l = r[i];
-              0 !== o[l] && (n = !1);
+              var l = r[i]
+              0 !== o[l] && (n = !1)
             }
-            n && (u.splice(t--, 1), (e = a((a.s = r[0]))));
+            n && (u.splice(t--, 1), (e = a((a.s = r[0]))))
           }
-          return e;
+          return e
         }
         var n = {},
           o = { 100: 0 },
-          u = [];
+          u = []
         function a(t) {
-          if (n[t]) return n[t].exports;
-          var r = (n[t] = { i: t, l: !1, exports: {} });
-          return e[t].call(r.exports, r, r.exports, a), (r.l = !0), r.exports;
+          if (n[t]) return n[t].exports
+          var r = (n[t] = { i: t, l: !1, exports: {} })
+          return e[t].call(r.exports, r, r.exports, a), (r.l = !0), r.exports
         }
-        (a.m = e),
+        ;(a.m = e),
           (a.c = n),
           (a.d = function (e, t, r) {
-            a.o(e, t) ||
-              Object.defineProperty(e, t, { enumerable: !0, get: r });
+            a.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: r })
           }),
           (a.r = function (e) {
-            "undefined" != typeof Symbol &&
+            'undefined' != typeof Symbol &&
               Symbol.toStringTag &&
-              Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
-              Object.defineProperty(e, "__esModule", { value: !0 });
+              Object.defineProperty(e, Symbol.toStringTag, { value: 'Module' }),
+              Object.defineProperty(e, '__esModule', { value: !0 })
           }),
           (a.t = function (e, t) {
-            if ((1 & t && (e = a(e)), 8 & t)) return e;
-            if (4 & t && "object" == typeof e && e && e.__esModule) return e;
-            var r = Object.create(null);
+            if ((1 & t && (e = a(e)), 8 & t)) return e
+            if (4 & t && 'object' == typeof e && e && e.__esModule) return e
+            var r = Object.create(null)
             if (
               (a.r(r),
-              Object.defineProperty(r, "default", { enumerable: !0, value: e }),
-              2 & t && "string" != typeof e)
+              Object.defineProperty(r, 'default', { enumerable: !0, value: e }),
+              2 & t && 'string' != typeof e)
             )
               for (var n in e)
                 a.d(
                   r,
                   n,
                   function (t) {
-                    return e[t];
+                    return e[t]
                   }.bind(null, n)
-                );
-            return r;
+                )
+            return r
           }),
           (a.n = function (e) {
             var t =
               e && e.__esModule
                 ? function () {
-                    return e.default;
+                    return e.default
                   }
                 : function () {
-                    return e;
-                  };
-            return a.d(t, "a", t), t;
+                    return e
+                  }
+            return a.d(t, 'a', t), t
           }),
           (a.o = function (e, t) {
-            return Object.prototype.hasOwnProperty.call(e, t);
+            return Object.prototype.hasOwnProperty.call(e, t)
           }),
-          (a.p = "/vi-assets/static-assets/");
+          (a.p = '/vi-assets/static-assets/')
         var i = (window.webpackJsonp = window.webpackJsonp || []),
-          l = i.push.bind(i);
-        (i.push = t), (i = i.slice());
-        for (var f = 0; f < i.length; f++) t(i[f]);
-        var p = l;
-        r();
-      })([]);
+          l = i.push.bind(i)
+        ;(i.push = t), (i = i.slice())
+        for (var f = 0; f < i.length; f++) t(i[f])
+        var p = l
+        r()
+      })([])
     </script>
 
     <script>
@@ -4784,261 +4783,260 @@
               Object.prototype.hasOwnProperty.call(a, d) &&
                 a[d] &&
                 b.push(a[d][0]),
-              (a[d] = 0);
+              (a[d] = 0)
           for (t in i)
-            Object.prototype.hasOwnProperty.call(i, t) && (e[t] = i[t]);
-          for (s && s(r); b.length; ) b.shift()();
-          return o.push.apply(o, l || []), n();
+            Object.prototype.hasOwnProperty.call(i, t) && (e[t] = i[t])
+          for (s && s(r); b.length; ) b.shift()()
+          return o.push.apply(o, l || []), n()
         }
         function n() {
           for (var e, r = 0; r < o.length; r++) {
             for (var n = o[r], t = !0, c = 1; c < n.length; c++) {
-              var i = n[c];
-              0 !== a[i] && (t = !1);
+              var i = n[c]
+              0 !== a[i] && (t = !1)
             }
-            t && (o.splice(r--, 1), (e = d((d.s = n[0]))));
+            t && (o.splice(r--, 1), (e = d((d.s = n[0]))))
           }
-          return e;
+          return e
         }
         var t = {},
           a = { 101: 0 },
-          o = [];
+          o = []
         function d(r) {
-          if (t[r]) return t[r].exports;
-          var n = (t[r] = { i: r, l: !1, exports: {} });
-          return e[r].call(n.exports, n, n.exports, d), (n.l = !0), n.exports;
+          if (t[r]) return t[r].exports
+          var n = (t[r] = { i: r, l: !1, exports: {} })
+          return e[r].call(n.exports, n, n.exports, d), (n.l = !0), n.exports
         }
-        (d.e = function (e) {
+        ;(d.e = function (e) {
           var r = [],
-            n = a[e];
+            n = a[e]
           if (0 !== n)
-            if (n) r.push(n[2]);
+            if (n) r.push(n[2])
             else {
               var t = new Promise(function (r, t) {
-                n = a[e] = [r, t];
-              });
-              r.push((n[2] = t));
+                n = a[e] = [r, t]
+              })
+              r.push((n[2] = t))
               var o,
-                c = document.createElement("script");
-              (c.charset = "utf-8"),
+                c = document.createElement('script')
+              ;(c.charset = 'utf-8'),
                 (c.timeout = 120),
-                d.nc && c.setAttribute("nonce", d.nc),
+                d.nc && c.setAttribute('nonce', d.nc),
                 (c.src = (function (e) {
                   return (
                     d.p +
-                    "" +
+                    '' +
                     ({
-                      0: "vendor",
-                      2: "vendors~capsule~clientSideCapsule~collections~explainer~freeaccess~getstarted~liveAsset~newsletter~n~b3d17ed8",
-                      3: "vendors~audio~byline~capsule~clientSideCapsule~collections~explainer~liveAsset~paidpost~slideshow~st~4be5fe75",
-                      6: "vendors~audio~card~clientSideCapsule~home~paidpost~trending~video",
-                      10: "vendors~newsletter~newsletters~newsletterssubscriberonly~recirculation",
-                      17: "recirculation~wellContent",
-                      18: "vendors~commentsForm~weddings",
-                      34: "ask",
-                      37: "audioblock",
-                      43: "canadaHamburgerNavData",
-                      44: "canadaSiteIndexData",
-                      47: "clientSideCapsule",
-                      50: "comments",
-                      51: "commentsForm",
-                      55: "dealbook",
-                      56: "defaultHamburgerNavData",
-                      57: "defaultSiteIndexData",
-                      58: "desktopNav",
-                      59: "emailsignup",
-                      70: "headerfullbleedhorizontal",
-                      71: "headerfullbleedvertical",
-                      72: "headerlivebriefingvi",
-                      75: "internationalHamburgerNavData",
-                      76: "internationalSiteIndexData",
-                      77: "lens",
-                      91: "opinion",
-                      93: "postLoginInterrupter",
-                      95: "producernotes",
-                      96: "recirculation",
-                      98: "reviewheader",
-                      104: "siteIndexContent",
-                      107: "slideshowinline",
-                      113: "upshot",
-                      116: "vendors~ask",
-                      117: "vendors~audioblock",
-                      119: "vendors~charlatan-select",
-                      120: "vendors~emailsignup",
-                      124: "vendors~headerfullbleedhorizontal",
-                      127: "vendors~producernotes",
-                      128: "vendors~reviewheader",
-                      130: "vendors~slideshowinline",
-                      131: "vendors~videoblock",
-                      135: "videoblock",
-                      140: "world-cup-2019",
+                      0: 'vendor',
+                      2: 'vendors~capsule~clientSideCapsule~collections~explainer~freeaccess~getstarted~liveAsset~newsletter~n~b3d17ed8',
+                      3: 'vendors~audio~byline~capsule~clientSideCapsule~collections~explainer~liveAsset~paidpost~slideshow~st~4be5fe75',
+                      6: 'vendors~audio~card~clientSideCapsule~home~paidpost~trending~video',
+                      10: 'vendors~newsletter~newsletters~newsletterssubscriberonly~recirculation',
+                      17: 'recirculation~wellContent',
+                      18: 'vendors~commentsForm~weddings',
+                      34: 'ask',
+                      37: 'audioblock',
+                      43: 'canadaHamburgerNavData',
+                      44: 'canadaSiteIndexData',
+                      47: 'clientSideCapsule',
+                      50: 'comments',
+                      51: 'commentsForm',
+                      55: 'dealbook',
+                      56: 'defaultHamburgerNavData',
+                      57: 'defaultSiteIndexData',
+                      58: 'desktopNav',
+                      59: 'emailsignup',
+                      70: 'headerfullbleedhorizontal',
+                      71: 'headerfullbleedvertical',
+                      72: 'headerlivebriefingvi',
+                      75: 'internationalHamburgerNavData',
+                      76: 'internationalSiteIndexData',
+                      77: 'lens',
+                      91: 'opinion',
+                      93: 'postLoginInterrupter',
+                      95: 'producernotes',
+                      96: 'recirculation',
+                      98: 'reviewheader',
+                      104: 'siteIndexContent',
+                      107: 'slideshowinline',
+                      113: 'upshot',
+                      116: 'vendors~ask',
+                      117: 'vendors~audioblock',
+                      119: 'vendors~charlatan-select',
+                      120: 'vendors~emailsignup',
+                      124: 'vendors~headerfullbleedhorizontal',
+                      127: 'vendors~producernotes',
+                      128: 'vendors~reviewheader',
+                      130: 'vendors~slideshowinline',
+                      131: 'vendors~videoblock',
+                      135: 'videoblock',
+                      140: 'world-cup-2019',
                     }[e] || e) +
-                    "-" +
+                    '-' +
                     {
-                      0: "b261f5b50fd0c857de07",
-                      2: "3ccdadb37f04d8e603d5",
-                      3: "42b58fe7b420be09e32b",
-                      6: "c5c67010b5c1436d0743",
-                      10: "941a1001a387760e9905",
-                      17: "a9c2914742b4fb79c91a",
-                      18: "3fabeef5a9d485b694dd",
-                      34: "dab354f5486346ebffd8",
-                      37: "d26e83ccc07e84c25a16",
-                      43: "7a3532e946b91d6fa4ee",
-                      44: "f74ce30606bb951c7328",
-                      47: "658a7e6b8b6b1b0191f2",
-                      50: "ecd635085594fb0d0ba7",
-                      51: "18910e688c995cecf264",
-                      55: "a84b15977c46c7a55ec3",
-                      56: "9027e890995fe667aed5",
-                      57: "7739a43f6e6e7cc9e29c",
-                      58: "af237b3df6ee45ee1e23",
-                      59: "e4b715b1738bb887fdf2",
-                      70: "5cd9970c48f1618134bc",
-                      71: "1e202be9bcd0b23f9932",
-                      72: "4234b24f5e7745fb1c4e",
-                      75: "6635def3d928dd0eeb4c",
-                      76: "ef8267adb30168e734e6",
-                      77: "e65c707494282fff7a8e",
-                      91: "da7f8542b9780cca152b",
-                      93: "fb4b7462f38b72e63238",
-                      95: "7ecde8a83e5526905566",
-                      96: "f5d5765434937f1ae680",
-                      98: "4164986af978690df485",
-                      104: "fe251f3f0c61e36bd411",
-                      107: "31b1377ae0a12a3c690e",
-                      113: "45793f8808b39659bf59",
-                      116: "a281e61bbbf07837d44b",
-                      117: "0791a17d46f3722c3bd3",
-                      119: "375df9948837e6e7916a",
-                      120: "77d244734a9b389a7a65",
-                      124: "ad43bf12d3d170b8f548",
-                      127: "b93e1d810dade73f5f43",
-                      128: "0d187a86e370d3158c34",
-                      130: "7e26d2220121bb8dc4e0",
-                      131: "91e0feb52055019ec149",
-                      135: "93dc35953c9d67620454",
-                      140: "8157a1eb70687c508df4",
+                      0: 'b261f5b50fd0c857de07',
+                      2: '3ccdadb37f04d8e603d5',
+                      3: '42b58fe7b420be09e32b',
+                      6: 'c5c67010b5c1436d0743',
+                      10: '941a1001a387760e9905',
+                      17: 'a9c2914742b4fb79c91a',
+                      18: '3fabeef5a9d485b694dd',
+                      34: 'dab354f5486346ebffd8',
+                      37: 'd26e83ccc07e84c25a16',
+                      43: '7a3532e946b91d6fa4ee',
+                      44: 'f74ce30606bb951c7328',
+                      47: '658a7e6b8b6b1b0191f2',
+                      50: 'ecd635085594fb0d0ba7',
+                      51: '18910e688c995cecf264',
+                      55: 'a84b15977c46c7a55ec3',
+                      56: '9027e890995fe667aed5',
+                      57: '7739a43f6e6e7cc9e29c',
+                      58: 'af237b3df6ee45ee1e23',
+                      59: 'e4b715b1738bb887fdf2',
+                      70: '5cd9970c48f1618134bc',
+                      71: '1e202be9bcd0b23f9932',
+                      72: '4234b24f5e7745fb1c4e',
+                      75: '6635def3d928dd0eeb4c',
+                      76: 'ef8267adb30168e734e6',
+                      77: 'e65c707494282fff7a8e',
+                      91: 'da7f8542b9780cca152b',
+                      93: 'fb4b7462f38b72e63238',
+                      95: '7ecde8a83e5526905566',
+                      96: 'f5d5765434937f1ae680',
+                      98: '4164986af978690df485',
+                      104: 'fe251f3f0c61e36bd411',
+                      107: '31b1377ae0a12a3c690e',
+                      113: '45793f8808b39659bf59',
+                      116: 'a281e61bbbf07837d44b',
+                      117: '0791a17d46f3722c3bd3',
+                      119: '375df9948837e6e7916a',
+                      120: '77d244734a9b389a7a65',
+                      124: 'ad43bf12d3d170b8f548',
+                      127: 'b93e1d810dade73f5f43',
+                      128: '0d187a86e370d3158c34',
+                      130: '7e26d2220121bb8dc4e0',
+                      131: '91e0feb52055019ec149',
+                      135: '93dc35953c9d67620454',
+                      140: '8157a1eb70687c508df4',
                     }[e] +
-                    ".js"
-                  );
-                })(e));
-              var i = new Error();
+                    '.js'
+                  )
+                })(e))
+              var i = new Error()
               o = function (r) {
-                (c.onerror = c.onload = null), clearTimeout(l);
-                var n = a[e];
+                ;(c.onerror = c.onload = null), clearTimeout(l)
+                var n = a[e]
                 if (0 !== n) {
                   if (n) {
-                    var t = r && ("load" === r.type ? "missing" : r.type),
-                      o = r && r.target && r.target.src;
-                    (i.message =
-                      "Loading chunk " +
+                    var t = r && ('load' === r.type ? 'missing' : r.type),
+                      o = r && r.target && r.target.src
+                    ;(i.message =
+                      'Loading chunk ' +
                       e +
-                      " failed.\n(" +
+                      ' failed.\n(' +
                       t +
-                      ": " +
+                      ': ' +
                       o +
-                      ")"),
-                      (i.name = "ChunkLoadError"),
+                      ')'),
+                      (i.name = 'ChunkLoadError'),
                       (i.type = t),
                       (i.request = o),
-                      n[1](i);
+                      n[1](i)
                   }
-                  a[e] = void 0;
+                  a[e] = void 0
                 }
-              };
+              }
               var l = setTimeout(function () {
-                o({ type: "timeout", target: c });
-              }, 12e4);
-              (c.onerror = c.onload = o), document.head.appendChild(c);
+                o({ type: 'timeout', target: c })
+              }, 12e4)
+              ;(c.onerror = c.onload = o), document.head.appendChild(c)
             }
-          return Promise.all(r);
+          return Promise.all(r)
         }),
           (d.m = e),
           (d.c = t),
           (d.d = function (e, r, n) {
-            d.o(e, r) ||
-              Object.defineProperty(e, r, { enumerable: !0, get: n });
+            d.o(e, r) || Object.defineProperty(e, r, { enumerable: !0, get: n })
           }),
           (d.r = function (e) {
-            "undefined" != typeof Symbol &&
+            'undefined' != typeof Symbol &&
               Symbol.toStringTag &&
-              Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
-              Object.defineProperty(e, "__esModule", { value: !0 });
+              Object.defineProperty(e, Symbol.toStringTag, { value: 'Module' }),
+              Object.defineProperty(e, '__esModule', { value: !0 })
           }),
           (d.t = function (e, r) {
-            if ((1 & r && (e = d(e)), 8 & r)) return e;
-            if (4 & r && "object" == typeof e && e && e.__esModule) return e;
-            var n = Object.create(null);
+            if ((1 & r && (e = d(e)), 8 & r)) return e
+            if (4 & r && 'object' == typeof e && e && e.__esModule) return e
+            var n = Object.create(null)
             if (
               (d.r(n),
-              Object.defineProperty(n, "default", { enumerable: !0, value: e }),
-              2 & r && "string" != typeof e)
+              Object.defineProperty(n, 'default', { enumerable: !0, value: e }),
+              2 & r && 'string' != typeof e)
             )
               for (var t in e)
                 d.d(
                   n,
                   t,
                   function (r) {
-                    return e[r];
+                    return e[r]
                   }.bind(null, t)
-                );
-            return n;
+                )
+            return n
           }),
           (d.n = function (e) {
             var r =
               e && e.__esModule
                 ? function () {
-                    return e.default;
+                    return e.default
                   }
                 : function () {
-                    return e;
-                  };
-            return d.d(r, "a", r), r;
+                    return e
+                  }
+            return d.d(r, 'a', r), r
           }),
           (d.o = function (e, r) {
-            return Object.prototype.hasOwnProperty.call(e, r);
+            return Object.prototype.hasOwnProperty.call(e, r)
           }),
-          (d.p = "/vi-assets/static-assets/"),
+          (d.p = '/vi-assets/static-assets/'),
           (d.oe = function (e) {
-            throw (console.error(e), e);
-          });
+            throw (console.error(e), e)
+          })
         var c = (window.webpackJsonp = window.webpackJsonp || []),
-          i = c.push.bind(c);
-        (c.push = r), (c = c.slice());
-        for (var l = 0; l < c.length; l++) r(c[l]);
-        var s = i;
-        n();
-      })([]);
+          i = c.push.bind(c)
+        ;(c.push = r), (c = c.slice())
+        for (var l = 0; l < c.length; l++) r(c[l])
+        var s = i
+        n()
+      })([])
     </script>
     <script>
-      (function () {
+      ;(function () {
         var _f = function () {
           try {
             var e = [
-              "first-paint",
-              "first-contentful-paint",
-              "userBtnRender",
-              "appRenderTime",
-            ];
+              'first-paint',
+              'first-contentful-paint',
+              'userBtnRender',
+              'appRenderTime',
+            ]
             new window.PerformanceObserver(function (r) {
               for (var n = r.getEntries(), a = 0; a < n.length; a += 1) {
-                var t = n[a];
+                var t = n[a]
                 if (e.indexOf(t.name) > -1) {
-                  var i = {};
-                  (i[t.name] = Math.round(t.duration || t.startTime)),
+                  var i = {}
+                  ;(i[t.name] = Math.round(t.duration || t.startTime)),
                     (window.dataLayer = window.dataLayer || []).push({
-                      event: "performance",
+                      event: 'performance',
                       pageview: { performance: i },
-                    });
+                    })
                 }
               }
-            }).observe({ entryTypes: ["mark", "measure", "paint"] });
+            }).observe({ entryTypes: ['mark', 'measure', 'paint'] })
           } catch (e) {}
-        };
-        _f.apply(null, []);
-      })();
-      (function () {
+        }
+        _f.apply(null, [])
+      })()
+      ;(function () {
         var _f = function () {
           !(function () {
             if (
@@ -5046,123 +5044,123 @@
               (!window.BOOMR ||
                 (!window.BOOMR.version && !window.BOOMR.snippetExecuted))
             ) {
-              (window.BOOMR = window.BOOMR || {}),
+              ;(window.BOOMR = window.BOOMR || {}),
                 (window.BOOMR.snippetStart = new Date().getTime()),
                 (window.BOOMR.snippetExecuted = !0),
                 (window.BOOMR.snippetVersion = 14),
                 (window.BOOMR.url =
-                  "https://s.go-mpulse.net/boomerang/ATH8A-MAMN8-XPXCH-N5KAX-8D239");
+                  'https://s.go-mpulse.net/boomerang/ATH8A-MAMN8-XPXCH-N5KAX-8D239')
               var e = (
                   document.currentScript ||
-                  document.getElementsByTagName("script")[0]
+                  document.getElementsByTagName('script')[0]
                 ).parentNode,
                 n = !1,
-                t = document.createElement("link");
+                t = document.createElement('link')
               t.relList &&
-              "function" == typeof t.relList.supports &&
-              t.relList.supports("preload") &&
-              "as" in t
-                ? ((window.BOOMR.snippetMethod = "p"),
+              'function' == typeof t.relList.supports &&
+              t.relList.supports('preload') &&
+              'as' in t
+                ? ((window.BOOMR.snippetMethod = 'p'),
                   (t.href = window.BOOMR.url),
-                  (t.rel = "preload"),
-                  (t.as = "script"),
-                  t.addEventListener("load", function () {
+                  (t.rel = 'preload'),
+                  (t.as = 'script'),
+                  t.addEventListener('load', function () {
                     if (!n) {
-                      var t = document.createElement("script");
-                      (t.id = "boomr-scr-as"),
+                      var t = document.createElement('script')
+                      ;(t.id = 'boomr-scr-as'),
                         (t.src = window.BOOMR.url),
                         (t.async = !0),
                         e.appendChild(t),
-                        (n = !0);
+                        (n = !0)
                     }
                   }),
-                  t.addEventListener("error", function () {
-                    o(!0);
+                  t.addEventListener('error', function () {
+                    o(!0)
                   }),
                   setTimeout(function () {
-                    n || o(!0);
+                    n || o(!0)
                   }, 3e3),
                   (BOOMR_lstart = new Date().getTime()),
                   e.appendChild(t))
                 : o(!1),
                 window.addEventListener
-                  ? window.addEventListener("load", i, !1)
-                  : window.attachEvent && window.attachEvent("onload", i);
+                  ? window.addEventListener('load', i, !1)
+                  : window.attachEvent && window.attachEvent('onload', i)
             }
             function o(t) {
-              n = !0;
+              n = !0
               var o,
                 i,
                 d,
                 a,
                 r = document,
-                s = window;
+                s = window
               if (
-                ((window.BOOMR.snippetMethod = t ? "if" : "i"),
+                ((window.BOOMR.snippetMethod = t ? 'if' : 'i'),
                 (i = function (e, n) {
-                  var t = r.createElement("script");
-                  (t.id = n || "boomr-if-as"),
+                  var t = r.createElement('script')
+                  ;(t.id = n || 'boomr-if-as'),
                     (t.src = window.BOOMR.url),
                     (BOOMR_lstart = new Date().getTime()),
-                    (e = e || r.body).appendChild(t);
+                    (e = e || r.body).appendChild(t)
                 }),
                 !window.addEventListener &&
                   window.attachEvent &&
                   navigator.userAgent.match(/MSIE [67]./))
               )
                 return (
-                  (window.BOOMR.snippetMethod = "s"), void i(e, "boomr-async")
-                );
-              ((d = document.createElement("IFRAME")).src = "about:blank"),
-                (d.title = ""),
-                (d.role = "presentation"),
-                (d.loading = "eager"),
+                  (window.BOOMR.snippetMethod = 's'), void i(e, 'boomr-async')
+                )
+              ;((d = document.createElement('IFRAME')).src = 'about:blank'),
+                (d.title = ''),
+                (d.role = 'presentation'),
+                (d.loading = 'eager'),
                 ((a = (d.frameElement || d).style).width = 0),
                 (a.height = 0),
                 (a.border = 0),
-                (a.display = "none"),
-                e.appendChild(d);
+                (a.display = 'none'),
+                e.appendChild(d)
               try {
-                (s = d.contentWindow), (r = s.document.open());
+                ;(s = d.contentWindow), (r = s.document.open())
               } catch (e) {
-                (o = document.domain),
+                ;(o = document.domain),
                   (d.src =
                     "javascript:var d=document.open();d.domain='" +
                     o +
                     "';void 0;"),
                   (s = d.contentWindow),
-                  (r = s.document.open());
+                  (r = s.document.open())
               }
               o
                 ? ((r._boomrl = function () {
-                    (this.domain = o), i();
+                    ;(this.domain = o), i()
                   }),
                   r.write("<body onload='document._boomrl();'>"))
                 : ((s._boomrl = function () {
-                    i();
+                    i()
                   }),
                   s.addEventListener
-                    ? s.addEventListener("load", s._boomrl, !1)
-                    : s.attachEvent && s.attachEvent("onload", s._boomrl)),
-                r.close();
+                    ? s.addEventListener('load', s._boomrl, !1)
+                    : s.attachEvent && s.attachEvent('onload', s._boomrl)),
+                r.close()
             }
             function i(e) {
-              window.BOOMR_onload = (e && e.timeStamp) || new Date().getTime();
+              window.BOOMR_onload = (e && e.timeStamp) || new Date().getTime()
             }
-          })();
-        };
-        _f.apply(null, []);
-      })();
+          })()
+        }
+        _f.apply(null, [])
+      })()
     </script>
 
     <script>
-      (function (w, l) {
-        w[l] = w[l] || [];
+      ;(function (w, l) {
+        w[l] = w[l] || []
         w[l].push({
-          "gtm.start": new Date().getTime(),
-          event: "gtm.js",
-        });
-      })(window, "dataLayer");
+          'gtm.start': new Date().getTime(),
+          event: 'gtm.js',
+        })
+      })(window, 'dataLayer')
     </script>
 
     <!-- RELEASE 69b7f983a4cd76ce65a72aa8da77d68d06b92adb -->
