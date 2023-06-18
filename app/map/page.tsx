@@ -58,7 +58,7 @@ export default function Map() {
     name: 'San Franciscto International Airport',
   })
   const [airportIata, setAirportIata] = useState('SFO')
-  const [zoom] = useState(10)
+  const [zoom] = useState(5)
   const darkMode = useDarkMode()
   const mapContainerRef = useRef<any>(null)
   const map = useRef<mapboxgl.Map | any>(null)
@@ -123,8 +123,8 @@ export default function Map() {
       arrivalFlightsFetch,
       departureFlightsFetch,
     ]).then(([airport, arrivals, departures]) => {
-      const arrivalColor = darkMode ? '#080' : '#0a0'
-      const departureColor = darkMode ? '#800' : '#a00'
+      const arrivalColor = darkMode ? '#2e7d32' : '#66bb6a'
+      const departureColor = darkMode ? '#c62828' : '#ef5350'
       setStats({
         arrival: {
           count: arrivals.data.response.length,
@@ -157,10 +157,15 @@ export default function Map() {
         })
       )
     })
-  }, [airportIata])
+  }, [darkMode, airportIata])
 
   useEffect(() => {
-    map?.current?.setCenter([airport.lng, airport.lat])
+    map?.current?.flyTo({
+      center: [airport.lng, airport.lat],
+      zoom,
+      duration: 2000,
+      essential: true,
+    })
   }, [airport.lng, airport.lat])
 
   useEffect(() => {
