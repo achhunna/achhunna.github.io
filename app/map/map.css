@@ -21,9 +21,64 @@
 
 .mapboxgl-popup {
   max-width: 400px;
-  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.mapboxgl-popup-content {
+  padding: 5px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .mapboxgl-popup-tip {
+    border-top-color: #666 !important;
+  }
+  .mapboxgl-popup-content {
+    background-color: #666;
+    color: #fff;
+  }
 }
 
 .mapboxgl-ctrl-logo {
   display: none !important;
+}
+
+.filter-ctrl {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+}
+
+.filter-ctrl input[type='text'] {
+  font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  width: 100%;
+  border: 0;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  width: 180px;
+  text-transform: uppercase;
+}
+
+.filter-ctrl button {
+  padding: 10px;
+}
+
+.stats-container {
+  padding: 10px;
+  font-weight: bold;
+}
+
+.flight-popup .title {
+  text-transform: uppercase;
+}
+
+.flight-popup .flag-icon {
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+.flight-popup .date {
+  font-size: 10px;
 }

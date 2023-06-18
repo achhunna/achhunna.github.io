@@ -9,6 +9,8 @@
     "@types/node": "^18.11.5",
     "@types/react": "^18.0.23",
     "@types/react-dom": "^18.0.7",
+    "axios": "^1.4.0",
+    "country-code-emoji": "^2.3.0",
     "mapbox-gl": "^2.15.0",
     "next": "latest",
     "react": "^18.2.0",

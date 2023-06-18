@@ -1,14 +1,47 @@
 'use client'
 import mapboxgl from 'mapbox-gl'
-import { createRef, useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import './map.css'
 import Plane from './plane'
 import { createRoot } from 'react-dom/client'
+import { useDarkMode } from '../utils/hooks'
+import axios from 'axios'
+import { countryCodeEmoji } from 'country-code-emoji'
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN ?? ''
 const airLabsAPIKey = process.env.REACT_APP_AIR_LABS_API_KEY
 const airLabsBaseURL = `https://airlabs.co/api/v9`
+const flightsURL = `${airLabsBaseURL}/flights?api_key=${airLabsAPIKey}`
+const airportURL = `${airLabsBaseURL}/airports?api_key=${airLabsAPIKey}`
+
+type StatsType = {
+  arrival: { count: number; color: string }
+  departure: { count: number; color: string }
+}
+
+type FlightsReponseType = {
+  flight_iata: string
+  lng: number
+  lat: number
+  dir: number
+  flag: string
+  speed: number
+  dep_iata: string
+  arr_iata: string
+  updated: number
+}
+
+type FlightAdditionalType = {
+  fill: string
+  type: 'arriving' | 'departing'
+}
+
+type AirportType = {
+  lng: number
+  lat: number
+  name: string
+}
 
 const Marker = ({ fill }: { fill: string }) => {
   return (
@@ -19,30 +52,134 @@ const Marker = ({ fill }: { fill: string }) => {
 }
 
 export default function Map() {
-  const [lng] = useState(-122.380227)
-  const [lat] = useState(37.617678)
-  const [zoom] = useState(1.8)
-  const [mode, setMode] = useState(
-    typeof window !== 'undefined' &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light'
-  )
+  const [airport, setAirport] = useState<AirportType>({
+    lng: -122.380227,
+    lat: 37.617678,
+    name: 'San Franciscto International Airport',
+  })
+  const [airportIata, setAirportIata] = useState('SFO')
+  const [zoom] = useState(10)
+  const darkMode = useDarkMode()
   const mapContainerRef = useRef<any>(null)
   const map = useRef<mapboxgl.Map | any>(null)
-  const ref = useRef<any>(null)
+  const markerRef = useRef<any>(null)
+  const [stats, setStats] = useState<StatsType | null>(null)
+  const [allMarkers, setAllMarkers] = useState<mapboxgl.Marker[] | null[]>([])
+
+  const parseFlightResponse = ({
+    flight_iata,
+    lng,
+    lat,
+    dir,
+    fill,
+    flag,
+    speed,
+    dep_iata,
+    arr_iata,
+    updated,
+    type,
+  }: FlightsReponseType & FlightAdditionalType) => {
+    markerRef.current = document.createElement('div')
+    const root = createRoot(markerRef.current)
+    const updatedDate = new Date(updated * 1000)
+    const popupDescription = `
+    <div class="flight-popup">
+      <h3 class="title" style="color: ${fill}">${type}</h3>
+      <h3>
+        ${flight_iata}<span class="flag-icon">${countryCodeEmoji(
+      flag === 'UK' ? 'GB' : flag
+    )}</span>
+      </h3>
+      <p>speed: ${speed}kph</p>
+      <p>${dep_iata} → ${arr_iata}</p>
+      <p class="date">${updatedDate.toLocaleString()}</p>
+    </div>
+    `
+    root.render(<Marker fill={fill} />)
+    const popup = new mapboxgl.Popup({ closeButton: false }).setHTML(
+      popupDescription
+    )
+
+    const marker = new mapboxgl.Marker(markerRef.current)
+      .setLngLat([lng, lat])
+      .setPopup(popup)
+      .setRotation(dir)
+      .addTo(map.current)
+
+    // @ts-ignore
+    setAllMarkers((allMarkers) => [...allMarkers, marker])
+  }
 
   useEffect(() => {
-    // Add listener to update styles
-    window
-      .matchMedia('(prefers-color-scheme: dark)')
-      .addEventListener('change', (e) => {
-        setMode(e.matches ? 'dark' : 'light')
+    const airportsFetch = axios.get(`${airportURL}&iata_code=${airportIata}`)
+    const arrivalFlightsFetch = axios.get(
+      `${flightsURL}&arr_iata=${airportIata}`
+    )
+    const departureFlightsFetch = axios.get(
+      `${flightsURL}&dep_iata=${airportIata}`
+    )
+    Promise.all([
+      airportsFetch,
+      arrivalFlightsFetch,
+      departureFlightsFetch,
+    ]).then(([airport, arrivals, departures]) => {
+      const arrivalColor = darkMode ? '#080' : '#0a0'
+      const departureColor = darkMode ? '#800' : '#a00'
+      setStats({
+        arrival: {
+          count: arrivals.data.response.length,
+          color: arrivalColor,
+        },
+        departure: {
+          count: departures.data.response.length,
+          color: departureColor,
+        },
       })
+      if (allMarkers.length > 0) {
+        allMarkers.forEach((marker) => {
+          marker?.remove()
+        })
+        setAllMarkers([])
+      }
+      setAirport({
+        lng: airport.data.response[0].lng,
+        lat: airport.data.response[0].lat,
+        name: airport.data.response[0].name,
+      })
+      arrivals.data.response.forEach((args: FlightsReponseType) =>
+        parseFlightResponse({ ...args, fill: arrivalColor, type: 'arriving' })
+      )
+      departures.data.response.forEach((args: FlightsReponseType) =>
+        parseFlightResponse({
+          ...args,
+          fill: departureColor,
+          type: 'departing',
+        })
+      )
+    })
+  }, [airportIata])
+
+  useEffect(() => {
+    map?.current?.setCenter([airport.lng, airport.lat])
+  }, [airport.lng, airport.lat])
+
+  useEffect(() => {
+    map.current?.setStyle(
+      `mapbox://styles/mapbox/${darkMode ? 'dark' : 'light'}-v10`
+    )
+
+    return () => {
+      window
+        .matchMedia('(prefers-color-scheme: dark)')
+        .removeEventListener('change', () => {})
+    }
+  }, [darkMode])
+
+  useEffect(() => {
     map.current = new mapboxgl.Map({
       container: mapContainerRef.current,
-      style: `mapbox://styles/mapbox/${mode}-v10`,
-      center: [lng, lat],
+      style: `mapbox://styles/mapbox/${darkMode ? 'dark' : 'light'}-v10`,
+      center: [airport.lng, airport.lat],
       zoom: zoom,
       projection: 'globe' as any as mapboxgl.Projection,
     })
@@ -53,45 +190,59 @@ export default function Map() {
       }),
       'top-right'
     )
-
-    fetch(
-      `${airLabsBaseURL}/flights?api_key=${airLabsAPIKey}&_view=array&_fields=flight_iata,lng,lat&arr_iata=sfo`
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        data.forEach((d: number[]) => {
-          ref.current = document.createElement('div')
-          const root = createRoot(ref.current)
-          root.render(<Marker fill={mode === 'light' ? '#666' : '#fff'} />)
-          const popup = new mapboxgl.Popup().setHTML(`<h3>${d[0]}</h3>`)
-
-          new mapboxgl.Marker(ref.current)
-            .setLngLat([d[1], d[2]])
-            .setPopup(popup)
-            .addTo(map.current)
-        })
-      })
-
     return () => {
-      window
-        .matchMedia('(prefers-color-scheme: dark)')
-        .removeEventListener('change', () => {})
       map.current.remove()
     }
-  }, [mode])
+  }, [])
 
   const memoStyle = useMemo(
     () => ({
-      backgroundColor: mode === 'light' ? '#b9defe' : '#000',
+      backgroundColor: darkMode ? '#000' : '#b9defe',
       height: '100vh',
       width: '100vw',
     }),
-    [mode]
+    [darkMode]
+  )
+
+  const handleSubmit = useCallback(
+    (e: React.SyntheticEvent<HTMLFormElement>) => {
+      e.preventDefault()
+      const form = e.currentTarget
+      const formElements = form.elements as typeof form.elements & {
+        filter: { value: string }
+      }
+      setAirportIata(formElements.filter.value)
+    },
+    []
   )
 
   return (
     <main style={memoStyle}>
       <div className="map-container" ref={mapContainerRef} />
+      <form action="" className="filter-ctrl" onSubmit={handleSubmit}>
+        <h3 style={{ marginBottom: 10 }}>{airport.name}</h3>
+        <input
+          id="filter-input"
+          type="text"
+          name="filter"
+          placeholder="Filter by name"
+          defaultValue={airportIata}
+        />
+        <button type="submit">Send</button>
+        {stats && (
+          <div className="stats-container">
+            <div style={{ color: stats?.arrival.color }}>
+              Arrivals: <>{stats?.arrival.count}</>
+            </div>
+            <div style={{ color: stats?.departure.color }}>
+              Departures: <>{stats?.departure.count}</>
+            </div>
+            <div>
+              Total: <>{stats?.arrival.count + stats?.departure.count}</>
+            </div>
+          </div>
+        )}
+      </form>
     </main>
   )
 }
