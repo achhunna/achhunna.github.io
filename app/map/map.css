@@ -1,4 +1,4 @@
-.mapContainer {
+.map-container {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -6,7 +6,7 @@
   right: 0;
 }
 
-.sidebarStyle {
+.sidebar {
   display: inline-block;
   position: absolute;
   top: 0;
@@ -19,7 +19,11 @@
   font-weight: bold;
 }
 
-.mapboxglPopup {
+.mapboxgl-popup {
   max-width: 400px;
   font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+.mapboxgl-ctrl-logo {
+  display: none !important;
 }
