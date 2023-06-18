@@ -103,7 +103,7 @@ export default function Map() {
     const marker = new mapboxgl.Marker(markerRef.current)
       .setLngLat([lng, lat])
       .setPopup(popup)
-      .setRotation(dir)
+      .setRotation(dir - 45) // accomodate for svg icon rotation
       .addTo(map.current)
 
     // @ts-ignore
