@@ -18,6 +18,8 @@
   .mapboxgl-popup-tip {
     border-top-color: #222 !important;
     border-bottom-color: #222 !important;
+    border-left-color: #222 !important;
+    border-right-color: #222 !important;
   }
   .mapboxgl-popup-content {
     background-color: #222;
