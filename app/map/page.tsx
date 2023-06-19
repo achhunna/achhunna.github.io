@@ -43,6 +43,11 @@ type AirportType = {
   name: string
 }
 
+type Point = {
+  lng: number
+  lat: number
+}
+
 const Marker = ({ fill }: { fill: string }) => {
   return (
     <div style={{ width: '20px', height: '20px' }}>
@@ -106,8 +111,68 @@ export default function Map() {
       .setRotation(dir - 45) // accomodate for svg icon rotation
       .addTo(map.current)
 
+    marker.getElement().addEventListener('click', () => {
+      const airportsFetch = axios.get(
+        `${airportURL}&iata_code=${dep_iata},${arr_iata}`
+      )
+      airportsFetch.then(({ data }) => {
+        const start = data.response[0]
+        const end = data.response[1]
+        showLine({
+          startPoint: { lng: start.lng, lat: start.lat },
+          midPoint: { lng, lat },
+          endPoint: { lng: end.lng, lat: end.lat },
+        })
+      })
+    })
+
     // @ts-ignore
     setAllMarkers((allMarkers) => [...allMarkers, marker])
+  }
+
+  const showLine = ({
+    startPoint,
+    midPoint,
+    endPoint,
+  }: {
+    startPoint: Point
+    midPoint: Point
+    endPoint: Point
+  }) => {
+    if (map.current.getLayer('route')) {
+      map.current.removeLayer('route')
+    }
+    if (map.current.getSource('route')) {
+      map.current.removeSource('route')
+    }
+    map.current.addSource('route', {
+      type: 'geojson',
+      data: {
+        type: 'Feature',
+        properties: {},
+        geometry: {
+          type: 'LineString',
+          coordinates: [
+            [startPoint.lng, startPoint.lat],
+            [midPoint.lng, midPoint.lat],
+            [endPoint.lng, endPoint.lat],
+          ],
+        },
+      },
+    })
+    map.current.addLayer({
+      id: 'route',
+      type: 'line',
+      source: 'route',
+      layout: {
+        'line-join': 'round',
+        'line-cap': 'round',
+      },
+      paint: {
+        'line-color': '#2196f3',
+        'line-width': 2,
+      },
+    })
   }
 
   useEffect(() => {
@@ -195,9 +260,8 @@ export default function Map() {
       }),
       'top-right'
     )
-    return () => {
-      map.current.remove()
-    }
+
+    map.current.on('load', () => {})
   }, [])
 
   const memoStyle = useMemo(
