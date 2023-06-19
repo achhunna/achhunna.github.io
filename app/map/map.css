@@ -17,6 +17,7 @@
 @media (prefers-color-scheme: dark) {
   .mapboxgl-popup-tip {
     border-top-color: #222 !important;
+    border-bottom-color: #222 !important;
   }
   .mapboxgl-popup-content {
     background-color: #222;
