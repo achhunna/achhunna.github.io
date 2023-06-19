@@ -86,9 +86,9 @@ export default function Map() {
     <div class="flight-popup">
       <h3 class="title" style="color: ${fill}">${type}</h3>
       <h3>
-        ${flight_iata}<span class="flag-icon">${countryCodeEmoji(
-      flag === 'UK' ? 'GB' : flag
-    )}</span>
+        ${flight_iata ?? ''}<span class="flag-icon">${
+      flag && countryCodeEmoji(flag === 'UK' ? 'GB' : flag)
+    }</span>
       </h3>
       <p>speed: ${speed}kph</p>
       <p>${dep_iata} → ${arr_iata}</p>
@@ -123,8 +123,8 @@ export default function Map() {
       arrivalFlightsFetch,
       departureFlightsFetch,
     ]).then(([airport, arrivals, departures]) => {
-      const arrivalColor = darkMode ? '#2e7d32' : '#66bb6a'
-      const departureColor = darkMode ? '#c62828' : '#ef5350'
+      const arrivalColor = '#66bb6a'
+      const departureColor = '#ef5350'
       setStats({
         arrival: {
           count: arrivals.data.response.length,
@@ -157,7 +157,7 @@ export default function Map() {
         })
       )
     })
-  }, [darkMode, airportIata])
+  }, [airportIata])
 
   useEffect(() => {
     map?.current?.flyTo({
@@ -233,7 +233,6 @@ export default function Map() {
           placeholder="Filter by name"
           defaultValue={airportIata}
         />
-        <button type="submit">Send</button>
         {stats && (
           <div className="stats-container">
             <div style={{ color: stats?.arrival.color }}>
