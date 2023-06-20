@@ -130,6 +130,15 @@ export default function Map() {
     setAllMarkers((allMarkers) => [...allMarkers, marker])
   }
 
+  const removeLine = () => {
+if (map.current?.getLayer('route')) {
+      map.current.removeLayer('route')
+    }
+    if (map.current?.getSource('route')) {
+      map.current.removeSource('route')
+    }
+  }
+
   const showLine = ({
     startPoint,
     midPoint,
@@ -139,12 +148,7 @@ export default function Map() {
     midPoint: Point
     endPoint: Point
   }) => {
-    if (map.current.getLayer('route')) {
-      map.current.removeLayer('route')
-    }
-    if (map.current.getSource('route')) {
-      map.current.removeSource('route')
-    }
+    removeLine()
     map.current.addSource('route', {
       type: 'geojson',
       data: {
@@ -176,6 +180,7 @@ export default function Map() {
   }
 
   useEffect(() => {
+    removeLine()
     const airportsFetch = axios.get(`${airportURL}&iata_code=${airportIata}`)
     const arrivalFlightsFetch = axios.get(
       `${flightsURL}&arr_iata=${airportIata}`
