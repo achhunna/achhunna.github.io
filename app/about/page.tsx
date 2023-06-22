@@ -15,7 +15,7 @@ export default function About() {
             <a href="/nyt-saildrone.html">Saildrone</a>
           </li>
           <li>
-            some <Link href="/uses">things</Link> I use on a daily basis
+            some <Link href="/uses">things</Link> I use
           </li>
           <li>
             sometimes I write{' '}
