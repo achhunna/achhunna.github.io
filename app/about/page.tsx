@@ -11,7 +11,7 @@ export default function About() {
             building products that bring meaningful change
           </li>
           <li>
-            currently building navigation data UI at{' '}
+            currently building <a href="/map">navigation</a> data UI at{' '}
             <a href="/nyt-saildrone.html">Saildrone</a>
           </li>
           <li>
