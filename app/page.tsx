@@ -7,7 +7,9 @@ export default function Home() {
       <nav>
         <ul>
           <li>
-            <Link href="/about">about</Link>
+            <Link href="/about" title="(37.9198, -122.2931)">
+              about
+            </Link>
           </li>
           <li>
             <a href="https://github.com/achhunna">github</a>
