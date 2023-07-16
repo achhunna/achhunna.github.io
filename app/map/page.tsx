@@ -8,12 +8,9 @@ import { createRoot } from 'react-dom/client'
 import { useDarkMode } from '../utils/hooks'
 import axios from 'axios'
 import { countryCodeEmoji } from 'country-code-emoji'
+import { airportURL, flightsURL } from './constants'
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN ?? ''
-const airLabsAPIKey = process.env.REACT_APP_AIR_LABS_API_KEY
-const airLabsBaseURL = `https://airlabs.co/api/v9`
-const flightsURL = `${airLabsBaseURL}/flights?api_key=${airLabsAPIKey}`
-const airportURL = `${airLabsBaseURL}/airports?api_key=${airLabsAPIKey}`
 
 type StatsType = {
   arrival: { count: number; color: string }
@@ -130,8 +127,8 @@ export default function Map() {
     setAllMarkers((allMarkers) => [...allMarkers, marker])
   }
 
-  const removeLine = () => {
-if (map.current?.getLayer('route')) {
+  const handleRemoveLines = () => {
+    if (map.current?.getLayer('route')) {
       map.current.removeLayer('route')
     }
     if (map.current?.getSource('route')) {
@@ -148,12 +145,14 @@ if (map.current?.getLayer('route')) {
     midPoint: Point
     endPoint: Point
   }) => {
-    removeLine()
+    handleRemoveLines()
     map.current.addSource('route', {
-      type: 'geojson',
+      type: 'geojson', //https://geojson.org
       data: {
         type: 'Feature',
-        properties: {},
+        properties: {
+          name: 'Airplane route',
+        },
         geometry: {
           type: 'LineString',
           coordinates: [
@@ -174,13 +173,13 @@ if (map.current?.getLayer('route')) {
       },
       paint: {
         'line-color': '#2196f3',
-        'line-width': 2,
+        'line-width': 1,
       },
     })
   }
 
   useEffect(() => {
-    removeLine()
+    handleRemoveLines()
     const airportsFetch = axios.get(`${airportURL}&iata_code=${airportIata}`)
     const arrivalFlightsFetch = axios.get(
       `${flightsURL}&arr_iata=${airportIata}`
@@ -251,6 +250,9 @@ if (map.current?.getLayer('route')) {
   }, [darkMode])
 
   useEffect(() => {
+    if (map.current) {
+      return
+    }
     map.current = new mapboxgl.Map({
       container: mapContainerRef.current,
       style: `mapbox://styles/mapbox/${darkMode ? 'dark' : 'light'}-v10`,
@@ -266,7 +268,12 @@ if (map.current?.getLayer('route')) {
       'top-right'
     )
 
-    map.current.on('load', () => {})
+    map.current.on('load', () => {
+      console.log('map loaded')
+    })
+    map.current.on('click', handleRemoveLines)
+
+    return () => map.current.remove()
   }, [])
 
   const memoStyle = useMemo(
