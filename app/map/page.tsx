@@ -9,6 +9,7 @@ import { useDarkMode } from '../utils/hooks'
 import axios from 'axios'
 import { countryCodeEmoji } from 'country-code-emoji'
 import { airportURL, flightsURL } from './constants'
+import { Point } from '@turf/turf'
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN ?? ''
 
@@ -40,17 +41,35 @@ type AirportType = {
   name: string
 }
 
-type Point = {
-  lng: number
-  lat: number
-}
-
 const Marker = ({ fill }: { fill: string }) => {
   return (
     <div style={{ width: '20px', height: '20px' }}>
       <Plane fill={fill} />
     </div>
   )
+}
+
+const doesCross180Meridian = (start: Point, end: Point) => {
+  const startLng = start.coordinates[0]
+  const endLng = end.coordinates[0]
+  return (
+    (startLng < 0 && endLng > 0 && startLng < -90 && endLng > 90) ||
+    (startLng > 0 && endLng < 0 && startLng > 90 && endLng < -90)
+  )
+}
+
+const parseLng = (start: Point, end: Point) => {
+  if (doesCross180Meridian(start, end)) {
+    let endLng = end.coordinates[0]
+    if (end.coordinates[0] - start.coordinates[0] >= 180) {
+      // when startLng is -ve & endLng is +ve
+      endLng -= 360
+    } else if (end.coordinates[0] - start.coordinates[0] < 180) {
+      endLng += 360
+    }
+    return endLng
+  }
+  return end.coordinates[0]
 }
 
 export default function Map() {
@@ -66,7 +85,9 @@ export default function Map() {
   const map = useRef<mapboxgl.Map | any>(null)
   const markerRef = useRef<any>(null)
   const [stats, setStats] = useState<StatsType | null>(null)
-  const [allMarkers, setAllMarkers] = useState<mapboxgl.Marker[] | null[]>([])
+  const [allFlightMarkers, setAllFlightMarkers] = useState<
+    mapboxgl.Marker[] | null[]
+  >([])
 
   const parseFlightResponse = ({
     flight_iata,
@@ -116,23 +137,38 @@ export default function Map() {
         const start = data.response[0]
         const end = data.response[1]
         showLine({
-          startPoint: { lng: start.lng, lat: start.lat },
-          midPoint: { lng, lat },
-          endPoint: { lng: end.lng, lat: end.lat },
+          startPoint: { type: 'Point', coordinates: [start.lng, start.lat] },
+          midPoint: { type: 'Point', coordinates: [lng, lat] },
+          endPoint: { type: 'Point', coordinates: [end.lng, end.lat] },
         })
       })
     })
 
     // @ts-ignore
-    setAllMarkers((allMarkers) => [...allMarkers, marker])
+    setAllFlightMarkers((allFlightMarkers) => [...allFlightMarkers, marker])
   }
 
   const handleRemoveLines = () => {
-    if (map.current?.getLayer('route')) {
-      map.current.removeLayer('route')
+    console.log({ map: map.current })
+    if (map.current?.getLayer('route1')) {
+      map.current.removeLayer('route1')
     }
-    if (map.current?.getSource('route')) {
-      map.current.removeSource('route')
+    if (map.current?.getSource('route1')) {
+      map.current.removeSource('route1')
+    }
+    if (map.current?.getLayer('route2')) {
+      map.current.removeLayer('route2')
+    }
+    if (map.current?.getSource('route2')) {
+      map.current.removeSource('route2')
+    }
+    const allAirportMarkers = map.current?.allAirportMarkers
+    if (allAirportMarkers?.length > 0) {
+      allAirportMarkers.forEach((marker: mapboxgl.Marker, i: number) => {
+        if (i !== 0) {
+          marker?.remove()
+        }
+      })
     }
   }
 
@@ -146,8 +182,10 @@ export default function Map() {
     endPoint: Point
   }) => {
     handleRemoveLines()
-    map.current.addSource('route', {
-      type: 'geojson', //https://geojson.org
+    const midPointLng = parseLng(startPoint, midPoint)
+    const endPointLng = parseLng(midPoint, endPoint)
+    map.current.addSource('route1', {
+      type: 'geojson', // https://geojson.org
       data: {
         type: 'Feature',
         properties: {
@@ -156,17 +194,32 @@ export default function Map() {
         geometry: {
           type: 'LineString',
           coordinates: [
-            [startPoint.lng, startPoint.lat],
-            [midPoint.lng, midPoint.lat],
-            [endPoint.lng, endPoint.lat],
+            [startPoint.coordinates[0], startPoint.coordinates[1]],
+            [midPointLng, midPoint.coordinates[1]],
+          ],
+        },
+      },
+    })
+    map.current.addSource('route2', {
+      type: 'geojson', // https://geojson.org
+      data: {
+        type: 'Feature',
+        properties: {
+          name: 'Airplane route',
+        },
+        geometry: {
+          type: 'LineString',
+          coordinates: [
+            [midPoint.coordinates[0], midPoint.coordinates[1]],
+            [endPointLng, endPoint.coordinates[1]],
           ],
         },
       },
     })
     map.current.addLayer({
-      id: 'route',
+      id: 'route1',
       type: 'line',
-      source: 'route',
+      source: 'route1',
       layout: {
         'line-join': 'round',
         'line-cap': 'round',
@@ -176,6 +229,31 @@ export default function Map() {
         'line-width': 1,
       },
     })
+    map.current.addLayer({
+      id: 'route2',
+      type: 'line',
+      source: 'route2',
+      layout: {
+        'line-join': 'round',
+        'line-cap': 'round',
+      },
+      paint: {
+        'line-color': '#2196f3',
+        'line-width': 1,
+      },
+    })
+
+    const marker1 = new mapboxgl.Marker()
+      .setLngLat([startPoint.coordinates[0], startPoint.coordinates[1]])
+      .addTo(map.current)
+    const marker2 = new mapboxgl.Marker()
+      .setLngLat([endPoint.coordinates[0], endPoint.coordinates[1]])
+      .addTo(map.current)
+    const newAllAirportMarkers = map.current.allAirportMarkers
+      ? [...map.current.allAirportMarkers]
+      : []
+    newAllAirportMarkers.push(marker1, marker2)
+    map.current.allAirportMarkers = newAllAirportMarkers
   }
 
   useEffect(() => {
@@ -204,11 +282,11 @@ export default function Map() {
           color: departureColor,
         },
       })
-      if (allMarkers.length > 0) {
-        allMarkers.forEach((marker) => {
+      if (allFlightMarkers.length > 0) {
+        allFlightMarkers.forEach((marker) => {
           marker?.remove()
         })
-        setAllMarkers([])
+        setAllFlightMarkers([])
       }
       setAirport({
         lng: airport.data.response[0].lng,
@@ -235,7 +313,23 @@ export default function Map() {
       duration: 2000,
       essential: true,
     })
-  }, [airport.lng, airport.lat])
+    if (map?.current) {
+      const marker = new mapboxgl.Marker()
+        .setLngLat([airport.lng, airport.lat])
+        .addTo(map?.current)
+
+      const newAllAirportMarkers = map.current.allAirportMarkers
+        ? [...map.current.allAirportMarkers]
+        : []
+      const oldMarker = newAllAirportMarkers[0]
+      if (oldMarker) {
+        oldMarker.remove()
+      }
+      newAllAirportMarkers[0] = marker
+      map.current.allAirportMarkers = newAllAirportMarkers
+      handleRemoveLines()
+    }
+  }, [airport.lng, airport.lat, map.current])
 
   useEffect(() => {
     map.current?.setStyle(

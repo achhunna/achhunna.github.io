@@ -6,6 +6,7 @@
     "deploy": "next build && touch out/.nojekyll && git add out/ && git commit -m \"Deploy\" && git push origin `git subtree split --prefix out main`:gh-pages --force"
   },
   "dependencies": {
+    "@turf/turf": "^6.5.0",
     "@types/node": "^18.11.5",
     "@types/react": "^18.0.23",
     "@types/react-dom": "^18.0.7",
