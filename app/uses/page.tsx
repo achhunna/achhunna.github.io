@@ -29,7 +29,7 @@ export default function Uses() {
             
             <ul>
               <li>MacBook Pro M1 16" (2021)</li>
-              <li>iPhone 12 mini</li>
+              <li>iPhone 15</li>
               <li>AirPods Pro</li>
             </ul>
           </li>
