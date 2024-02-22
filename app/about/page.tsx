@@ -22,7 +22,10 @@ export default function About() {
           <li>
             sometimes I write{' '}
             <a href="https://medium.com/@achhunna" target="_blank">
-              stuff
+              🗒️
+            </a>
+            {' '}& make <a href="https://vimeo.com/achhunna" target="_blank">
+              🎥
             </a>
           </li>
         </ul>
