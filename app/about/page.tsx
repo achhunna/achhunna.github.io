@@ -3,7 +3,7 @@ import Link from 'next/link'
 export default function About() {
   return (
     <div className="container">
-      <h1 title="(37.9198, -122.2931)">🤓 about me</h1>
+      <h1 title="(37.9198, -122.2931)">🏄‍♂️ about me</h1>
       <section>
         <ul>
           <li>
@@ -23,8 +23,9 @@ export default function About() {
             sometimes I write{' '}
             <a href="https://medium.com/@achhunna" target="_blank">
               🗒️
-            </a>
-            {' '}& make <a href="https://vimeo.com/achhunna" target="_blank">
+            </a>{' '}
+            & make{' '}
+            <a href="https://vimeo.com/achhunna" target="_blank">
               🎥
             </a>
           </li>
