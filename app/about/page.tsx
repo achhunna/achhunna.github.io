@@ -7,27 +7,22 @@ export default function About() {
       <section>
         <ul>
           <li>
-            front-end engineer with a passion for learning new technologies and
-            building products that bring meaningful change
+            creative mind always looking for projects to tinker with
           </li>
           <li>
-            currently building <a href="/map">navigation</a> data UI at{' '}
-            <a href="/nyt-saildrone.html" title="(37.7822, -122.3049)">
-              Saildrone
-            </a>
+            love to <a href="https://vimeo.com/achhunna" target="_blank">surf</a> and play <a href="https://instagram.com/shakablues" target="_blank">music</a> 
           </li>
           <li>
-            some <Link href="/uses">things</Link> I use
-          </li>
-          <li>
-            sometimes I write{' '}
+            I {' '}
             <a href="https://medium.com/@achhunna" target="_blank">
-              🗒️
-            </a>{' '}
-            & make{' '}
-            <a href="https://vimeo.com/achhunna" target="_blank">
-              🎥
-            </a>
+            write
+            </a> sometimes
+          </li>
+          <li>
+            work in software building SaaSy <a href="https://amplitude.com" target="_blank">UI</a>
+          </li>
+          <li>
+            if you're curious what I <Link href="/uses">use</Link> for work
           </li>
         </ul>
       </section>

@@ -12,15 +12,13 @@ export default function Uses() {
             <a href="https://code.visualstudio.com" target="_blank">
               Visual Studio Code
             </a>
-            : one of the best text editors for web development
           </li>
-          <li>Terminal: standard macOS terminal</li>
+          <li>iTerm</li>
           <li>
             <a href="https://slack.com/downloads/mac" target="_blank">
               Slack
             </a>
-            : work related communication happens here, great for archiving
-            channel discussions
+            : work related communication happens here
           </li>
         </ul>
         <ul>
@@ -28,7 +26,7 @@ export default function Uses() {
           <li>
             
             <ul>
-              <li>MacBook Pro M1 16" (2021)</li>
+              <li>MacBook Pro M3 14" (2023)</li>
               <li>iPhone 15</li>
               <li>AirPods Pro (2nd generation)</li>
             </ul>
