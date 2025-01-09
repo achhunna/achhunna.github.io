@@ -18,8 +18,7 @@ export default function RootLayout({
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
               __html: `
-          window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));
-          window.amplitude.init('1ddaaad51e2ff25a9d5d4366e64c735d', {"autocapture":{"elementInteractions":true}});` 
+          window.amplitude.init('1ddaaad51e2ff25a9d5d4366e64c735d', {"fetchRemoteConfig":true,"autocapture":true});` 
               }}
           />
       </head>
