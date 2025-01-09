@@ -10,7 +10,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <Script
-          async
           src="https://cdn.amplitude.com/script/1ddaaad51e2ff25a9d5d4366e64c735d.js"
         />
         <Script
@@ -18,7 +17,8 @@ export default function RootLayout({
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
               __html: `
-          window.amplitude.init('1ddaaad51e2ff25a9d5d4366e64c735d', {"fetchRemoteConfig":true,"autocapture":true});` 
+          window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));
+          window.amplitude.init('1ddaaad51e2ff25a9d5d4366e64c735d', {"autocapture":{"elementInteractions":true}});` 
               }}
           />
       </head>
