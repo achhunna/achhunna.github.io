@@ -26,6 +26,14 @@ export default function RootLayout({
   `,
         }}
       />
+      <Script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.1-min.js.gz" />
+      <Script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.8.0-min.js.gz" />
+      <Script 
+       dangerouslySetInnerHTML={{
+          __html: `
+      window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));window.amplitude.init('1ddaaad51e2ff25a9d5d4366e64c735d', {"autocapture":{"elementInteractions":true}});` 
+          }}
+        />
     </html>
   )
 }
