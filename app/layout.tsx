@@ -18,15 +18,11 @@ export default function RootLayout({
       <head>
         <Script
           src="https://cdn.amplitude.com/script/1ddaaad51e2ff25a9d5d4366e64c735d.js"
-        />
-        <Script
-          id="amplitude"
-          strategy="afterInteractive"
           onReady={() => {
             window.amplitude.add(window.sessionReplay.plugin({sampleRate: 1}));
             window.amplitude.init('1ddaaad51e2ff25a9d5d4366e64c735d', {"autocapture":{"elementInteractions":true}});
           }}
-          />
+        />
       </head>
       <body>{children}</body>
       <Script
