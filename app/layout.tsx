@@ -9,8 +9,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script src="https://cdn.amplitude.com/libs/analytics-browser-2.11.1-min.js.gz" />
-        <Script src="https://cdn.amplitude.com/libs/plugin-session-replay-browser-1.8.0-min.js.gz" />
+        <Script
+          async
+          src="https://cdn.amplitude.com/script/1ddaaad51e2ff25a9d5d4366e64c735d.js"
+        />
         <Script 
         dangerouslySetInnerHTML={{
             __html: `
