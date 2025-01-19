@@ -10,7 +10,7 @@ export default function About() {
             creative mind always looking for projects to tinker with
           </li>
           <li>
-            love to <a href="https://youtube.com/@achhunna/videos">surf</a> and play <a href="https://instagram.com/shakablues">music</a> 
+            love to <a href="https://youtube.com/@achhunna">surf</a> and play <a href="https://instagram.com/shakablues">music</a> 
           </li>
           <li>
             I {' '}
