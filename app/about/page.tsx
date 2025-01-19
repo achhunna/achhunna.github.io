@@ -10,19 +10,16 @@ export default function About() {
             creative mind always looking for projects to tinker with
           </li>
           <li>
-            love to <a href="https://vimeo.com/achhunna" target="_blank">surf</a> and play <a href="https://instagram.com/shakablues" target="_blank">music</a> 
+            love to <a href="https://youtube.com/@achhunna/videos">surf</a> and play <a href="https://instagram.com/shakablues">music</a> 
           </li>
           <li>
             I {' '}
-            <a href="https://medium.com/@achhunna" target="_blank">
+            <a href="https://medium.com/@achhunna">
             write
             </a> sometimes
           </li>
           <li>
-            work in software building SaaSy <a href="https://amplitude.com" target="_blank">UI</a>
-          </li>
-          <li>
-            if you're curious what I <Link href="/uses">use</Link> for work
+            work in software building SaaSy <a href="https://amplitude.com">UI</a>
           </li>
         </ul>
       </section>
