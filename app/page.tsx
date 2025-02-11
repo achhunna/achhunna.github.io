@@ -12,9 +12,6 @@ export default function Home() {
             </Link>
           </li>
           <li>
-            <a href="https://github.com/achhunna">github</a>
-          </li>
-          <li>
             <a href="https://linkedin.com/in/achhunna">linkedin</a>
           </li>
         </ul>
