@@ -18,9 +18,6 @@ export default function About() {
             write
             </a> sometimes
           </li>
-          <li>
-            work in software building SaaSy <a href="https://amplitude.com">UI</a>
-          </li>
         </ul>
       </section>
       <Link href="/">&#60; home</Link>
